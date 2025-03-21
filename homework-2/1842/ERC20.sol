@@ -1,7 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-contract ERC20 {
+import "../IERC20.sol";
+
+contract ERC20 is IERC20 {
     // State variables
     string private _name;
     string private _symbol;
@@ -11,14 +13,6 @@ contract ERC20 {
     // Mappings for balances and allowances
     mapping(address => uint256) private _balances;
     mapping(address => mapping(address => uint256)) private _allowances;
-
-    // Events from IERC20
-    event Transfer(address indexed from, address indexed to, uint256 value);
-    event Approval(
-        address indexed owner,
-        address indexed spender,
-        uint256 value
-    );
 
     // Constructor to initialize token details
     constructor(
@@ -37,27 +31,32 @@ contract ERC20 {
 
     // IERC20 functions
 
-    function name() external view returns (string memory) {
+    function name() external view override returns (string memory) {
         return _name;
     }
 
-    function symbol() external view returns (string memory) {
+    function symbol() external view override returns (string memory) {
         return _symbol;
     }
 
-    function decimals() external view returns (uint8) {
+    function decimals() external view override returns (uint8) {
         return _decimals;
     }
 
-    function totalSupply() external view returns (uint256) {
+    function totalSupply() external view override returns (uint256) {
         return _totalSupply;
     }
 
-    function balanceOf(address account) external view returns (uint256) {
+    function balanceOf(
+        address account
+    ) external view override returns (uint256) {
         return _balances[account];
     }
 
-    function transfer(address to, uint256 amount) external returns (bool) {
+    function transfer(
+        address to,
+        uint256 amount
+    ) external override returns (bool) {
         require(to != address(0), "ERC20: transfer to the zero address");
         require(
             _balances[msg.sender] >= amount,
@@ -73,11 +72,14 @@ contract ERC20 {
     function allowance(
         address owner,
         address spender
-    ) external view returns (uint256) {
+    ) external view override returns (uint256) {
         return _allowances[owner][spender];
     }
 
-    function approve(address spender, uint256 amount) external returns (bool) {
+    function approve(
+        address spender,
+        uint256 amount
+    ) external override returns (bool) {
         require(spender != address(0), "ERC20: approve to the zero address");
 
         _allowances[msg.sender][spender] = amount;
@@ -89,7 +91,7 @@ contract ERC20 {
         address from,
         address to,
         uint256 amount
-    ) external returns (bool) {
+    ) external override returns (bool) {
         require(from != address(0), "ERC20: transfer from the zero address");
         require(to != address(0), "ERC20: transfer to the zero address");
         require(
