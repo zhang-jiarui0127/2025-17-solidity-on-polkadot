@@ -1,0 +1,3 @@
+[submodule "homework-2/1490/code/PaxonToken/lib/forge-std"]
+	path = homework-2/1490/code/PaxonToken/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
