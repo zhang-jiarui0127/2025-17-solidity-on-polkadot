@@ -1,0 +1,42 @@
+Compiling 23 files with Solc 0.8.20
+Solc 0.8.20 finished in 3.13s
+Compiler run successful!
+Analysing contracts...
+Running tests...
+
+Ran 22 tests for test/PaxonToken.t.sol:PaxonTokenTest
+[PASS] testAllowance() (gas: 38620)
+[PASS] testApproveAndTransferFrom() (gas: 80129)
+[PASS] testApproveExplicit() (gas: 38577)
+[PASS] testApproveToZeroAddress() (gas: 9922)
+[PASS] testBurn() (gas: 26957)
+[PASS] testBurnFailInsufficientBalance() (gas: 11715)
+[PASS] testBurnZeroAmount() (gas: 9522)
+[PASS] testInitialSupply() (gas: 15397)
+[PASS] testMetadata() (gas: 23286)
+[PASS] testMint() (gas: 48708)
+[PASS] testMintFailNotOwner() (gas: 14832)
+[PASS] testMintToZeroAddress() (gas: 12088)
+[PASS] testMintZeroAmount() (gas: 14202)
+[PASS] testTransfer() (gas: 46170)
+[PASS] testTransferFromExplicitSuccess() (gas: 79946)
+[PASS] testTransferFromFromZeroAddress() (gas: 12944)
+[PASS] testTransferFromInsufficientAllowance() (gas: 74764)
+[PASS] testTransferFromInsufficientBalance() (gas: 73798)
+[PASS] testTransferFromMaxAllowance() (gas: 57424)
+[PASS] testTransferFromToZeroAddress() (gas: 39425)
+[PASS] testTransferInsufficientBalance() (gas: 47024)
+[PASS] testTransferToZeroAddress() (gas: 9986)
+Suite result: ok. 22 passed; 0 failed; 0 skipped; finished in 13.52ms (43.74ms CPU time)
+
+Ran 1 test suite in 204.43ms (13.52ms CPU time): 22 tests passed, 0 failed, 0 skipped (22 total tests)
+
+╭-------------------------+-----------------+-----------------+-----------------+-----------------╮
+| File                    | % Lines         | % Statements    | % Branches      | % Funcs         |
++=================================================================================================+
+| script/PaxonToken.s.sol | 0.00% (0/9)     | 0.00% (0/9)     | 100.00% (0/0)   | 0.00% (0/2)     |
+|-------------------------+-----------------+-----------------+-----------------+-----------------|
+| src/PaxonToken.sol      | 100.00% (58/58) | 100.00% (45/45) | 100.00% (24/24) | 100.00% (13/13) |
+|-------------------------+-----------------+-----------------+-----------------+-----------------|
+| Total                   | 86.57% (58/67)  | 83.33% (45/54)  | 100.00% (24/24) | 86.67% (13/15)  |
+╰-------------------------+-----------------+-----------------+-----------------+-----------------╯
