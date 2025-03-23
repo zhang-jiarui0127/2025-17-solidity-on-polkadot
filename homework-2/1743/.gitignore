@@ -1,0 +1,9 @@
+# ignore target directory
+target/
+
+# ignore node_modules directory
+node_modules/
+
+# ignore other files
+.DS_Store
+*.log
