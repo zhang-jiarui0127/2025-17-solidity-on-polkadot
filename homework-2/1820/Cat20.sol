@@ -3,7 +3,7 @@ pragma solidity ^0.8.0;
 
 import "homework-2/IERC20.sol";
 
-abstract contract Cat20 is IERC20{
+contract Cat20 is IERC20{
     string private _name;
     string private _symbol;
     uint8 private _decimals;
@@ -42,6 +42,12 @@ abstract contract Cat20 is IERC20{
         _transfer(msg.sender, to, amount);
         return true;
     }
+    // 代理转账
+    function transferFrom(address from, address to, uint256 amount) external returns (bool){
+        _spendAllowance(from, msg.sender, amount);
+        _transfer(from, to, amount);
+        return true;
+     }
     // 授权额度查询
     function allowance(address owner, address spender) external override view returns (uint256){
         return _allowances[owner][spender];
@@ -52,7 +58,22 @@ abstract contract Cat20 is IERC20{
         return true;
     }
 
-    
+
+    function _mint(address account, uint256 amount) internal{
+        require(account != address(0), "Cat20: mint to zero address");
+
+        _totalSupply += amount;
+        _balances[account] += amount;
+        emit Transfer(address(0), account, amount);
+    }
+
+    function _spendAllowance(address owner, address spender, uint256 amount) internal {
+        uint256 curAllowance = this.allowance(owner, spender);
+        require(curAllowance >= amount, "Cat20: insufficient allowance");
+
+        _approve(owner, spender, curAllowance - amount);
+    }
+
     function _approve(address owner, address spender, uint256 amount) internal {
         require(owner != address(0), "Cat20: approve from zero address");
         require(spender != address(0), "Cat20: approve to zero address");
