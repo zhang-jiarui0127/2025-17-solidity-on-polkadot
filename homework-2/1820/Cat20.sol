@@ -12,11 +12,12 @@ contract Cat20 is IERC20{
     mapping(address => uint256) private _balances;
     mapping(address => mapping(address => uint256)) private _allowances;
 
-    constructor(string memory name_, string memory symbol_, uint8 decimals_, uint256 totalSupply_){
+    constructor(string memory name_, string memory symbol_, uint8 decimals_, uint256 initialSupply_){
         _name = name_;
         _symbol = symbol_;
         _decimals = decimals_;
-        _totalSupply = totalSupply_;
+
+        _mint(msg.sender, initialSupply_);
     }
 
     function name() external view override returns (string memory){
