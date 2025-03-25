@@ -3,10 +3,10 @@ pragma solidity ^0.8.0;
 
 import "homework-2/IERC20.sol";
 
-contract Cat20 is IERC20{
+contract TCat20 is IERC20{
     string private _name;
     string private _symbol;
-    uint8 private _decimals;
+    uint8 private immutable _decimals;
     uint256 private _totalSupply;
 
     mapping(address => uint256) private _balances;
@@ -17,7 +17,7 @@ contract Cat20 is IERC20{
         _symbol = symbol_;
         _decimals = decimals_;
 
-        _mint(msg.sender, initialSupply_);
+        _mint(msg.sender, initialSupply_ * 10 ** decimals_);
     }
 
     function name() external view override returns (string memory){
@@ -59,9 +59,9 @@ contract Cat20 is IERC20{
         return true;
     }
 
-
+    // ================== 内部函数 ================== 
     function _mint(address account, uint256 amount) internal{
-        require(account != address(0), "Cat20: mint to zero address");
+        require(account != address(0), "TCat20: mint to zero address");
 
         _totalSupply += amount;
         _balances[account] += amount;
@@ -70,14 +70,17 @@ contract Cat20 is IERC20{
 
     function _spendAllowance(address owner, address spender, uint256 amount) internal {
         uint256 curAllowance = this.allowance(owner, spender);
-        require(curAllowance >= amount, "Cat20: insufficient allowance");
-
-        _approve(owner, spender, curAllowance - amount);
+        if(amount != type(uint256).max){
+            require(curAllowance >= amount, "TCat20: insufficient allowance");
+            unchecked{
+                _approve(owner, spender, curAllowance - amount);
+            }
+        }        
     }
 
     function _approve(address owner, address spender, uint256 amount) internal {
-        require(owner != address(0), "Cat20: approve from zero address");
-        require(spender != address(0), "Cat20: approve to zero address");
+        require(owner != address(0), "TCat20: approve from zero address");
+        require(spender != address(0), "TCat20: approve to zero address");
         // uint256 ownerBalance = _balances[owner];
         // require(ownerBalance >= amount, "Cat20: insufficient allowance");
 
@@ -86,11 +89,11 @@ contract Cat20 is IERC20{
     }
 
     function _transfer(address from, address to, uint256 amount) internal{
-        require(from != address(0), "Cat20: transfer from zero address");
-        require(to != address(0), "Cat20: transfer to zero address");
+        require(from != address(0), "TCat20: transfer from zero address");
+        require(to != address(0), "TCat20: transfer to zero address");
 
         uint256 fromBalance = _balances[from];
-        require(fromBalance >= amount, "Cat20: insufficient allowance");
+        require(fromBalance >= amount, "TCat20: insufficient allowance");
 
         _balances[from] = fromBalance - amount;
         _balances[to] += amount;
