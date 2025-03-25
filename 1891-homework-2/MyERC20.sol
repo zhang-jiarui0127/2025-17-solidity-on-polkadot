@@ -18,10 +18,12 @@ contract MyERC20 is IERC20 {
         uint8 decimals_,
         uint256 initialSupply
     ) {
+
         _name = name_;
         _symbol = symbol_;
         _decimals = decimals_;
         _mint(msg.sender, initialSupply);
+
     }
 
     function name() public view override returns (string memory) {
