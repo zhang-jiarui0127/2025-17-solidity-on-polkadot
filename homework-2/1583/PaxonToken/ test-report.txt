@@ -1,0 +1,57 @@
+Compiling 25 files with Solc 0.8.28
+Solc 0.8.28 finished in 1.32s
+Compiler run successful with warnings:
+Warning (2072): Unused local variable.
+  --> script/PaxonToken.s.sol:12:9:
+   |
+12 |         PaxonToken token = new PaxonToken("Paxon Token", "PAX", 18, 1000);
+   |         ^^^^^^^^^^^^^^^^
+
+Analysing contracts...
+Running tests...
+
+Ran 22 tests for test/PaxonToken.t.sol:PaxonTokenTest
+[PASS] testAllowance() (gas: 38617)
+[PASS] testApproveAndTransferFrom() (gas: 80128)
+[PASS] testApproveExplicit() (gas: 38574)
+[PASS] testApproveToZeroAddress() (gas: 9925)
+[PASS] testBurn() (gas: 26956)
+[PASS] testBurnFailInsufficientBalance() (gas: 11719)
+[PASS] testBurnZeroAmount() (gas: 9526)
+[PASS] testInitialSupply() (gas: 15397)
+[PASS] testMetadata() (gas: 22558)
+[PASS] testMint() (gas: 48707)
+[PASS] testMintFailNotOwner() (gas: 14841)
+[PASS] testMintToZeroAddress() (gas: 12092)
+[PASS] testMintZeroAmount() (gas: 14206)
+[PASS] testTransfer() (gas: 46168)
+[PASS] testTransferFromExplicitSuccess() (gas: 79950)
+[PASS] testTransferFromFromZeroAddress() (gas: 12952)
+[PASS] testTransferFromInsufficientAllowance() (gas: 74773)
+[PASS] testTransferFromInsufficientBalance() (gas: 73802)
+[PASS] testTransferFromMaxAllowance() (gas: 57424)
+[PASS] testTransferFromToZeroAddress() (gas: 39431)
+[PASS] testTransferInsufficientBalance() (gas: 47030)
+[PASS] testTransferToZeroAddress() (gas: 9989)
+Suite result: ok. 22 passed; 0 failed; 0 skipped; finished in 1.74ms (1.37ms CPU time)
+
+Ran 2 tests for test/Counter.t.sol:CounterTest
+[PASS] testFuzz_SetNumber(uint256) (runs: 256, μ: 32043, ~: 32354)
+[PASS] test_Increment() (gas: 31851)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 6.51ms (6.12ms CPU time)
+
+Ran 2 test suites in 8.71ms (8.25ms CPU time): 24 tests passed, 0 failed, 0 skipped (24 total tests)
+
+╭-------------------------+-----------------+-----------------+-----------------+-----------------╮
+| File                    | % Lines         | % Statements    | % Branches      | % Funcs         |
++=================================================================================================+
+| script/Counter.s.sol    | 0.00% (0/5)     | 0.00% (0/3)     | 100.00% (0/0)   | 0.00% (0/2)     |
+|-------------------------+-----------------+-----------------+-----------------+-----------------|
+| script/PaxonToken.s.sol | 0.00% (0/5)     | 0.00% (0/6)     | 100.00% (0/0)   | 0.00% (0/1)     |
+|-------------------------+-----------------+-----------------+-----------------+-----------------|
+| src/Counter.sol         | 100.00% (4/4)   | 100.00% (2/2)   | 100.00% (0/0)   | 100.00% (2/2)   |
+|-------------------------+-----------------+-----------------+-----------------+-----------------|
+| src/PaxonToken.sol      | 100.00% (58/58) | 100.00% (45/45) | 100.00% (24/24) | 100.00% (13/13) |
+|-------------------------+-----------------+-----------------+-----------------+-----------------|
+| Total                   | 86.11% (62/72)  | 83.93% (47/56)  | 100.00% (24/24) | 83.33% (15/18)  |
+╰-------------------------+-----------------+-----------------+-----------------+-----------------╯
