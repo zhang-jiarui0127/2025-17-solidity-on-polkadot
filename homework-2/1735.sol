@@ -15,8 +15,8 @@ interface IERC20 {
 
 contract MyToken is IERC20 {
     string public name = "MyToken";
-    string public symbol = "MTK";
-    uint8 public decimals = 18;
+    string public symbol = "yjl";
+    uint8 public decimals = 1;
 
     uint256 private _totalSupply;
     mapping(address => uint256) private _balances;
@@ -57,7 +57,6 @@ contract MyToken is IERC20 {
     function transferFrom(address sender, address recipient, uint256 amount) public override returns (bool) {
         require(_balances[sender] >= amount, "ERC20: transfer amount exceeds balance");
         require(_allowances[sender][msg.sender] >= amount, "ERC20: transfer amount exceeds allowance");
-
         _balances[sender] -= amount;
         _balances[recipient] += amount;
         _allowances[sender][msg.sender] -= amount;
