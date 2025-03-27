@@ -48,3 +48,7 @@
 #### 函数修饰符
 - override: 重写，同java
 - virtual: 表示函数可被子合约重写
+
+#### 变量类型
+- constant: 值在编译时确定
+- immutable: 值在部署时确定
