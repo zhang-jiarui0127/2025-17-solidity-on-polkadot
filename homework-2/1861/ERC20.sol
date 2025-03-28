@@ -137,11 +137,11 @@ contract ERC20 is IERC20 {
      * - `sender` must have sufficient balance
      */
     function transferFrom(address sender, address recipient, uint256 amount) public override returns (bool) {
-        uint256 currentAllowance = _allowances[msg.sender][sender];
+        uint256 currentAllowance = _allowances[sender][msg.sender];
         require(currentAllowance >= amount, "ERC20: transfer amount exceeds allowance");
 
         unchecked {
-            _approve(msg.sender, sender, currentAllowance - amount);
+            _approve(sender, msg.sender, currentAllowance - amount);
         }
 
         _transfer(sender, recipient, amount);
