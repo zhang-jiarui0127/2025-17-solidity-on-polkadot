@@ -8,25 +8,49 @@ pragma solidity >=0.8.2 <0.9.0;
  * - 授权管理
  * - 供应量查询
  */
-contract SimpleERC20 {
+
+interface IERC20 {
+    // 代币总供应量
+    function totalSupply() external view returns (uint256);
+    
+    // 查询账户余额
+    function balanceOf(address account) external view returns (uint256);
+    
+    // 转账函数（从调用者地址发送代币）
+    function transfer(address recipient, uint256 amount) external returns (bool);
+    
+    // 查询授权额度（owner 授权给 spender 的剩余额度）
+    function allowance(address owner, address spender) external view returns (uint256);
+    
+    // 授权函数（允许 spender 操作调用者的代币）
+    function approve(address spender, uint256 amount) external returns (bool);
+    
+    // 从授权账户转账（需要提前授权）
+    function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
+    
+    // 转账事件（必须触发）
+    event Transfer(address indexed from, address indexed to, uint256 value);
+    
+    // 授权事件（必须触发）
+    event Approval(address indexed owner, address indexed spender, uint256 value);
+}
+
+contract SimpleERC20 is IERC20 {
+    // 代币名称
     string public name;
+    // 代币符号
     string public symbol;
-    uint8 public immutable decimals; 
-    
+    // 代币小数位
+    uint8 public decimals;
     // 总供应量
-    uint256 public totalSupply;
-    
+    uint256 public _totalSupply;
+
     // 余额记录
     mapping(address => uint256) private _balances;
     
     // 授权额度记录
     mapping(address => mapping(address => uint256)) private _allowances;
 
-    // 转账事件
-    event Transfer(address indexed from, address indexed to, uint256 value);
-    
-    // 授权事件
-    event Approval(address indexed owner, address indexed spender, uint256 value);
 
     /**
      * @dev 构造函数
@@ -49,20 +73,18 @@ contract SimpleERC20 {
     }
 
     /**
-     * @notice 查询账户余额
-     * @param account 要查询的地址
+     * @notice 返回代币的总供应量
      */
-    function balanceOf(address account) public view returns (uint256) {
-        return _balances[account];
+    function totalSupply() public view override returns (uint256) {
+        return _totalSupply;
     }
 
     /**
-     * @notice 查询授权额度
-     * @param owner 代币所有者
-     * @param spender 被授权地址
+     * @notice 查询账户余额
+     * @param account 要查询的地址
      */
-    function allowance(address owner, address spender) public view returns (uint256) {
-        return _allowances[owner][spender];
+    function balanceOf(address account) public view override returns (uint256) {
+        return _balances[account];
     }
 
     /**
@@ -70,7 +92,7 @@ contract SimpleERC20 {
      * @param to 接收地址
      * @param value 转账金额
      */
-    function transfer(address to, uint256 value) public returns (bool) {
+    function transfer(address to, uint256 value) public override returns (bool) {
         require(to != address(0), "ERC20: transfer to zero address");
         
         address owner = msg.sender;
@@ -79,15 +101,29 @@ contract SimpleERC20 {
     }
 
     /**
+     * @notice 查询授权额度
+     * @param owner 代币所有者
+     * @param spender 被授权地址
+     */
+    function allowance(address owner, address spender) public view override returns (uint256) {
+        return _allowances[owner][spender];
+    }
+
+    /**
      * @notice 授权其他地址使用代币
      * @param spender 被授权地址
      * @param value 授权金额
      */
-    function approve(address spender, uint256 value) public returns (bool) {
+    function approve(address spender, uint256 value) public override returns (bool) {
         address owner = msg.sender;
+        require(
+            value == 0 || _allowances[owner][spender] == 0,
+            "ERC20: non-zero allowance requires reset to zero first"
+        );
         _approve(owner, spender, value);
         return true;
     }
+
 
     /**
      * @notice 从授权账户转账
@@ -95,7 +131,7 @@ contract SimpleERC20 {
      * @param to 接收账户
      * @param value 转账金额
      */
-    function transferFrom(address from, address to, uint256 value) public returns (bool) {
+    function transferFrom(address from, address to, uint256 value) public override returns (bool) {
         address spender = msg.sender;
         _spendAllowance(from, spender, value);
         _transfer(from, to, value);
@@ -117,10 +153,10 @@ contract SimpleERC20 {
     /**
      * @dev 铸造代币
      */
-    function _mint(address to, uint256 value) private {
+    function _mint(address to, uint256 value) internal {
         require(to != address(0), "ERC20: mint to zero address");
         
-        totalSupply += value;
+        _totalSupply += value;
         _balances[to] += value;
         
         emit Transfer(address(0), to, value);
