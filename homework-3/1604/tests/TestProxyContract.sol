@@ -1,4 +1,3 @@
-// tests/TestProxyContract.sol
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
@@ -8,6 +7,8 @@ import "../contracts/ProxyContract.sol";
 contract TestProxyContract {
     LogicContract logicContract;
     ProxyContract proxyContract;
+
+    event TestResult(string message, uint256 count);
 
     constructor() {
         // Deploy LogicContract
@@ -25,7 +26,7 @@ contract TestProxyContract {
         uint256 count = proxyContract.count();
         require(count == 1, "Count should be 1 after increment");
 
-        // Log the result
-        console.log("Test passed: count is", count);
+        // Emit event to log the result
+        emit TestResult("Test passed: count is", count);
     }
 }
