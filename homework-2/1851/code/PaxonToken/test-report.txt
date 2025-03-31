@@ -1,0 +1,37 @@
+Compiling 22 files with Solc 0.8.28
+Solc 0.8.28 finished in 4.53s
+Compiler run successful!
+Analysing contracts...
+Running tests...
+
+Ran 22 tests for test/PaxonToken.t.sol:PaxonTokenTest
+[PASS] testAllowance() (gas: 38688)
+[PASS] testApproveAndTransferFrom() (gas: 80333)
+[PASS] testApproveExplicit() (gas: 38645)
+[PASS] testApproveToZeroAddress() (gas: 9964)
+[PASS] testBurn() (gas: 27048)
+[PASS] testBurnFailInsufficientBalance() (gas: 11753)
+[PASS] testBurnZeroAmount() (gas: 9559)
+[PASS] testInitialSupply() (gas: 15439)
+[PASS] testMetadata() (gas: 23384)
+[PASS] testMint() (gas: 48807)
+[PASS] testMintFailNotOwner() (gas: 14888)
+[PASS] testMintToZeroAddress() (gas: 12132)
+[PASS] testMintZeroAmount() (gas: 14248)
+[PASS] testTransfer() (gas: 46267)
+[PASS] testTransferFromExplicitSuccess() (gas: 80137)
+[PASS] testTransferFromFromZeroAddress() (gas: 13006)
+[PASS] testTransferFromInsufficientAllowance() (gas: 74921)
+[PASS] testTransferFromInsufficientBalance() (gas: 73938)
+[PASS] testTransferFromMaxAllowance() (gas: 57560)
+[PASS] testTransferFromToZeroAddress() (gas: 39520)
+[PASS] testTransferInsufficientBalance() (gas: 47124)
+[PASS] testTransferToZeroAddress() (gas: 10028)
+Suite result: ok. 22 passed; 0 failed; 0 skipped; finished in 135.95ms (17.47ms CPU time)
+
+Ran 1 test suite in 144.36ms (135.95ms CPU time): 22 tests passed, 0 failed, 0 skipped (22 total tests)
+| File                 | % Lines         | % Statements    | % Branches      | % Funcs         |
+|----------------------|-----------------|-----------------|-----------------|-----------------|
+| script/Counter.s.sol | 0.00% (0/3)     | 0.00% (0/3)     | 100.00% (0/0)   | 0.00% (0/2)     |
+| src/PaxonToken.sol   | 100.00% (45/45) | 100.00% (45/45) | 100.00% (24/24) | 100.00% (13/13) |
+| Total                | 93.75% (45/48)  | 93.75% (45/48)  | 100.00% (24/24) | 86.67% (13/15)  |
