@@ -17,9 +17,9 @@ contract ERC20 is IERC20{
   error ERC20InvalidSpender(address spender);
   error ERC20InsufficientAllowance(address owner, address spender, uint256 allowance, uint256 amount);
 
-  constructor(string memory name, string memory symbol ) {
-    _name = name;
-    _symbol = symbol;
+  constructor(string memory name_, string memory symbol_ ) {
+    _name = name_;
+    _symbol = symbol_;
   }
 
   function name() public view returns (string memory) {
@@ -72,7 +72,7 @@ contract ERC20 is IERC20{
     if (to == address(0)) {
       revert ERC20InvalidReceiver(to);
     }
-    if (_balances[form] < amount) {
+    if (_balances[from] < amount) {
       revert ERC20InsufficientBalance(from, _balances[from], amount);
     }
 
