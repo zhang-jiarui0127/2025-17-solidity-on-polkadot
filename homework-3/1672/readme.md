@@ -10,6 +10,5 @@ npx hardhat test --grep "代理模式和非代理模式测试"
 ```
 
 ## 测试结果如下
-![Login](/public/image.png)
 
-![alt text](/public/image.png)
+![alt text](/homework-3/1672/public/image.png)
