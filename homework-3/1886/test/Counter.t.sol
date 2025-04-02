@@ -2,23 +2,42 @@
 pragma solidity ^0.8.13;
 
 import {Test, console} from "forge-std/Test.sol";
-import {Counter} from "../src/Counter.sol";
+import {Logic} from "../src/Counter.sol";
+import {Proxy} from "../src/Counter.sol";
 
 contract CounterTest is Test {
-    Counter public counter;
+    Logic logic;
+    Proxy proxy;
 
     function setUp() public {
-        counter = new Counter();
-        counter.setNumber(0);
+        logic = new Logic();
+        proxy = new Proxy();
     }
 
-    function test_Increment() public {
-        counter.increment();
-        assertEq(counter.number(), 1);
+    function testIncrease() public {
+        uint256 initialCount = logic.count();
+        logic.increase();
+        uint256 finalCount = logic.count();
+        assertEq(finalCount, initialCount + 1);
     }
 
-    function testFuzz_SetNumber(uint256 x) public {
-        counter.setNumber(x);
-        assertEq(counter.number(), x);
+    function testGetStorage() public {
+        uint256 initialCount = logic.count();
+        proxy.callLogic(address(logic), true);
+        uint256 finalCount = logic.count();
+        assertEq(finalCount, initialCount);
+
+        bytes32 storageValue = proxy.getStorage(0);
+        assertEq(uint256(storageValue), initialCount + 1);
+    }
+
+    function testGetStorageNotDelegateCall() public {
+        uint256 initialCount = logic.count();
+        proxy.callLogic(address(logic), false);
+        uint256 finalCount = logic.count();
+        assertEq(finalCount, initialCount + 1);
+
+        bytes32 storageValue = proxy.getStorage(0);
+        assertEq(uint256(storageValue), initialCount);
     }
 }

@@ -2,17 +2,21 @@
 pragma solidity ^0.8.13;
 
 import {Script, console} from "forge-std/Script.sol";
-import {Counter} from "../src/Counter.sol";
+import {Logic} from "../src/Counter.sol";
+import {Proxy} from "../src/Counter.sol";
 
 contract CounterScript is Script {
-    Counter public counter;
+    // Deploys the Logic and Proxy contracts
+    Logic public logic;
+    Proxy public proxy;
 
     function setUp() public {}
 
     function run() public {
         vm.startBroadcast();
 
-        counter = new Counter();
+        logic = new Logic();
+        proxy = new Proxy();
 
         vm.stopBroadcast();
     }
