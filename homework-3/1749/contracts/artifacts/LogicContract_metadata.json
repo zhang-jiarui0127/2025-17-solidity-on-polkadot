@@ -1,0 +1,82 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "counter",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "increment",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"homework-3/1749/contracts/LogicContract.sol": "LogicContract"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"details": {
+				"constantOptimizer": false,
+				"cse": false,
+				"deduplicate": false,
+				"inliner": false,
+				"jumpdestRemover": false,
+				"orderLiterals": false,
+				"peephole": false,
+				"simpleCounterForLoopUncheckedIncrement": true,
+				"yul": false
+			},
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"homework-3/1749/contracts/LogicContract.sol": {
+			"keccak256": "0xea4b590eddd55182fe7714bc47f2d87548c46ed4a31ee6310c5da8a475c4d6e4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d13841c4793249b8e21a75d534a79a600ead0e1321dfd13eb7e54aca4434376d",
+				"dweb:/ipfs/QmWA85iMbDWM2Y7fmVtgtA2CTiQQ6TPEF3fHkbSVvswRJ5"
+			]
+		}
+	},
+	"version": 1
+}
