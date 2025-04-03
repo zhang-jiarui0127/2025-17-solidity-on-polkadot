@@ -1,0 +1,72 @@
+{
+	"compiler": {
+		"version": "0.8.22+commit.4fc1097e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "count",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "increase",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"homework-3/1691/Logic.sol": "Logic"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"homework-3/1691/Logic.sol": {
+			"keccak256": "0x8ce52f77d9af06a7a883b6ba5be4bf32483d12d16bd7db78de3fbfd4199875a8",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1996ef7ccc2b9077eca19a8199eba7d639743250f87f6920883a7f6d15e906dd",
+				"dweb:/ipfs/QmYUTEeSnojBThcrnx24xTuyDqxRoWthmwE2RZXHLN9uKA"
+			]
+		}
+	},
+	"version": 1
+}
