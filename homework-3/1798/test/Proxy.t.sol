@@ -15,19 +15,19 @@ contract ProxyTest is Test {
     }
 
     function testDelegatecallUpdatesProxyState() public {
-        uint256 proxyCount = proxy.count();
-        uint256 logicCount = logic.count();
+        uint256 proxycounter = proxy.counter();
+        uint256 logiccounter = logic.counter();
 
-        assertEq(proxyCount, 0, "init proxyCount is 0");
-        assertEq(logicCount, 0, "init logicCount is 0");
+        assertEq(proxycounter, 0, "init proxycounter is 0");
+        assertEq(logiccounter, 0, "init logiccounter is 0");
 
         proxy.proxyIncrement();
 
-        uint256 incrProxyCount = proxy.count();
-        uint256 incrLogicCount = logic.count();
+        uint256 incrProxycounter = proxy.counter();
+        uint256 incrLogiccounter = logic.counter();
 
-        assertEq(incrProxyCount, proxyCount + 1, "incrProxyCount is 1");
+        assertEq(incrProxycounter, proxycounter + 1, "incrProxycounter is 1");
 
-        assertEq(incrLogicCount, logicCount, "incrLogicCount is 0 ");
+        assertEq(incrLogiccounter, logiccounter, "incrLogiccounter is 0 ");
     }
 }
