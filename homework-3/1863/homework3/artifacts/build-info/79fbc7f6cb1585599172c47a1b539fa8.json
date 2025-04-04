@@ -1,0 +1,410 @@
+{
+	"id": "79fbc7f6cb1585599172c47a1b539fa8",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.28",
+	"solcLongVersion": "0.8.28+commit.7893614a",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"homework3/LogicContract.sol": {
+				"content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract LogicContract {\r\n\r\n    uint public value;\r\n    \r\n    function increment() public {\r\n        value += 1;\r\n    }\r\n    \r\n    function setValue(uint _newValue) public {\r\n        value = _newValue;\r\n    }\r\n}"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"contracts": {
+			"homework3/LogicContract.sol": {
+				"LogicContract": {
+					"abi": [
+						{
+							"inputs": [],
+							"name": "increment",
+							"outputs": [],
+							"stateMutability": "nonpayable",
+							"type": "function"
+						},
+						{
+							"inputs": [
+								{
+									"internalType": "uint256",
+									"name": "_newValue",
+									"type": "uint256"
+								}
+							],
+							"name": "setValue",
+							"outputs": [],
+							"stateMutability": "nonpayable",
+							"type": "function"
+						},
+						{
+							"inputs": [],
+							"name": "value",
+							"outputs": [
+								{
+									"internalType": "uint256",
+									"name": "",
+									"type": "uint256"
+								}
+							],
+							"stateMutability": "view",
+							"type": "function"
+						}
+					],
+					"metadata": {
+						"optimizer_settings": {
+							"is_debug_logging_enabled": false,
+							"is_fallback_to_size_enabled": false,
+							"is_verify_each_enabled": false,
+							"level_back_end": "Aggressive",
+							"level_middle_end": "Aggressive",
+							"level_middle_end_size": "Zero"
+						},
+						"revive_pallet_version": null,
+						"revive_version": "0.1.0-dev.12+commit.66f9a4d.llvm-18.1.8",
+						"solc_metadata": "{\"compiler\":{\"version\":\"0.8.28+commit.7893614a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"increment\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_newValue\",\"type\":\"uint256\"}],\"name\":\"setValue\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"value\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"homework3/LogicContract.sol\":\"LogicContract\"},\"evmVersion\":\"cancun\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"details\":{\"constantOptimizer\":false,\"cse\":false,\"deduplicate\":false,\"inliner\":false,\"jumpdestRemover\":false,\"orderLiterals\":false,\"peephole\":false,\"simpleCounterForLoopUncheckedIncrement\":true,\"yul\":false},\"runs\":200},\"remappings\":[]},\"sources\":{\"homework3/LogicContract.sol\":{\"keccak256\":\"0x1542228b5052b66b30fcfb7477ddc1db6427e24fd5e62dddc8b58249914fc962\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8aac6be642d4cf23c89a86d8bebbe3d5e23836f077529282348a3fed1757b90b\",\"dweb:/ipfs/Qmdv3eMJS1RxMc2vCKUqTtNdRoy27QqaNcZhC24SohTmU4\"]}},\"version\":1}",
+						"solc_version": "0.8.28+commit.7893614a.Emscripten.clang"
+					},
+					"devdoc": {
+						"kind": "dev",
+						"methods": {},
+						"version": 1
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					},
+					"storageLayout": {
+						"storage": [
+							{
+								"astId": 3,
+								"contract": "homework3/LogicContract.sol:LogicContract",
+								"label": "value",
+								"offset": 0,
+								"slot": "0",
+								"type": "t_uint256"
+							}
+						],
+						"types": {
+							"t_uint256": {
+								"encoding": "inplace",
+								"label": "uint256",
+								"numberOfBytes": "32"
+							}
+						}
+					},
+					"evm": {
+						"assembly": "// RO data = 0/0 bytes\n// RW data = 0/65552 bytes\n// Stack size = 16384 bytes\n\n// Instructions = 1189\n// Code size = 3568 bytes\n\n      : @0 (gas: 2)\n     0: i32 a2 = a0 >> 0x10\n     3: jump @6 if a2 != 0\n      : @1 (gas: 2)\n     6: a2 = 0x10001\n    11: jump @6 if a1 >=u a2\n      : @2 (gas: 4)\n    14: a1 = a1 + a0\n    17: i32 a1 = a1 + 0x1f\n    20: a1 = a1 & 0xffffffffffffffe0\n    23: jump @7 if a1 >=u 65537\n      : @3 (gas: 2)\n    29: a3 = i32 [0x20000]\n    34: jump @5 if a3 >=u a1\n      : @4 (gas: 4)\n    37: u32 [0x20000] = a1\n    42: a1 = 0x20010\n    47: a0 = a0 + a1\n    50: ret\n      : @5 (gas: 3)\n    52: a1 = 0x20010\n    57: a0 = a0 + a1\n    60: ret\n      : @6 (gas: 1)\n    62: trap\n      : @7 (gas: 1)\n    63: trap\n      : @8 (gas: 13)\n    64: sp = sp + 0xffffffffffffffd8\n    67: u64 [sp + 0x20] = ra\n    70: u64 [sp + 0x18] = s0\n    73: u64 [sp + 0x10] = s1\n    76: a2 = u64 [a1]\n    78: u64 [sp + 0x8] = a2\n    81: a2 = u64 [a1 + 0x8]\n    84: u64 [sp] = a2\n    86: s0 = u64 [a1 + 0x10]\n    89: s1 = u64 [a1 + 0x18]\n    92: i32 a0 = a0 + 0\n    94: a1 = 0x20\n    97: ra = 2, jump @0\n      : @9 [@dyn 1] (gas: 71)\n   101: a1 = reverse s1\n   103: a2 = reverse s0\n   105: a3 = u64 [sp]\n   107: a3 = reverse a3\n   109: a4 = u64 [sp + 0x8]\n   112: a4 = reverse a4\n   114: u8 [a0 + 0x18] = a4\n   117: u8 [a0 + 0x10] = a3\n   120: u8 [a0 + 0x8] = a2\n   123: u8 [a0] = a1\n   125: a5 = a4 >> 0x38\n   128: u8 [a0 + 0x1f] = a5\n   131: a5 = a4 >> 0x30\n   134: u8 [a0 + 0x1e] = a5\n   137: a5 = a4 >> 0x28\n   140: u8 [a0 + 0x1d] = a5\n   143: a5 = a4 >> 0x20\n   146: u8 [a0 + 0x1c] = a5\n   149: a5 = a4 >> 0x18\n   152: u8 [a0 + 0x1b] = a5\n   155: a5 = a4 >> 0x10\n   158: u8 [a0 + 0x1a] = a5\n   161: a4 = a4 >> 0x8\n   164: u8 [a0 + 0x19] = a4\n   167: a4 = a3 >> 0x38\n   170: u8 [a0 + 0x17] = a4\n   173: a4 = a3 >> 0x30\n   176: u8 [a0 + 0x16] = a4\n   179: a4 = a3 >> 0x28\n   182: u8 [a0 + 0x15] = a4\n   185: a4 = a3 >> 0x20\n   188: u8 [a0 + 0x14] = a4\n   191: a4 = a3 >> 0x18\n   194: u8 [a0 + 0x13] = a4\n   197: a4 = a3 >> 0x10\n   200: u8 [a0 + 0x12] = a4\n   203: a3 = a3 >> 0x8\n   206: u8 [a0 + 0x11] = a3\n   209: a3 = a2 >> 0x38\n   212: u8 [a0 + 0xf] = a3\n   215: a3 = a2 >> 0x30\n   218: u8 [a0 + 0xe] = a3\n   221: a3 = a2 >> 0x28\n   224: u8 [a0 + 0xd] = a3\n   227: a3 = a2 >> 0x20\n   230: u8 [a0 + 0xc] = a3\n   233: a3 = a2 >> 0x18\n   236: u8 [a0 + 0xb] = a3\n   239: a3 = a2 >> 0x10\n   242: u8 [a0 + 0xa] = a3\n   245: a2 = a2 >> 0x8\n   248: u8 [a0 + 0x9] = a2\n   251: a2 = a1 >> 0x38\n   254: u8 [a0 + 0x7] = a2\n   257: a2 = a1 >> 0x30\n   260: u8 [a0 + 0x6] = a2\n   263: a2 = a1 >> 0x28\n   266: u8 [a0 + 0x5] = a2\n   269: a2 = a1 >> 0x20\n   272: u8 [a0 + 0x4] = a2\n   275: a2 = a1 >> 0x18\n   278: u8 [a0 + 0x3] = a2\n   281: a2 = a1 >> 0x10\n   284: u8 [a0 + 0x2] = a2\n   287: a1 = a1 >> 0x8\n   290: u8 [a0 + 0x1] = a1\n   293: ra = u64 [sp + 0x20]\n   296: s0 = u64 [sp + 0x18]\n   299: s1 = u64 [sp + 0x10]\n   302: sp = sp + 0x28\n   305: ret\n      : @10 (gas: 6)\n   307: sp = sp + 0xfffffffffffffff0\n   310: u64 [sp + 0x8] = ra\n   313: u64 [sp] = s0\n   315: s0 = a0 & 0x1\n   318: ecalli 2 // 'call_data_size'\n   320: fallthrough\n      : @11 (gas: 2)\n   321: u32 [0x20004] = a0\n   326: jump @13 if s0 == 0\n      : @12 (gas: 1)\n   329: ra = 4, jump @14\n      : @13 [@dyn 2] (gas: 1)\n   333: ra = 6, jump @28\n      : @14 [@dyn 3] (gas: 9)\n   338: sp = sp + 0xffffffffffffffc0\n   341: u64 [sp + 0x38] = ra\n   344: u64 [sp + 0x30] = s0\n   347: u64 [sp + 0x28] = s1\n   350: s0 = sp + 0x40\n   353: sp = sp & 0xffffffffffffffe0\n   356: a0 = 0x40\n   359: a1 = 0x20\n   362: ra = 8, jump @0\n      : @15 [@dyn 4] (gas: 39)\n   367: u8 [a0 + 31] = 0x80\n   372: u8 [a0 + 30] = 0\n   375: u8 [a0 + 29] = 0\n   378: u8 [a0 + 28] = 0\n   381: u8 [a0 + 27] = 0\n   384: u8 [a0 + 26] = 0\n   387: u8 [a0 + 25] = 0\n   390: u8 [a0 + 24] = 0\n   393: u8 [a0 + 23] = 0\n   396: u8 [a0 + 22] = 0\n   399: u8 [a0 + 21] = 0\n   402: u8 [a0 + 20] = 0\n   405: u8 [a0 + 19] = 0\n   408: u8 [a0 + 18] = 0\n   411: u8 [a0 + 17] = 0\n   414: u8 [a0 + 16] = 0\n   417: u8 [a0 + 15] = 0\n   420: u8 [a0 + 14] = 0\n   423: u8 [a0 + 13] = 0\n   426: u8 [a0 + 12] = 0\n   429: u8 [a0 + 11] = 0\n   432: u8 [a0 + 10] = 0\n   435: u8 [a0 + 9] = 0\n   438: u8 [a0 + 8] = 0\n   441: u8 [a0 + 7] = 0\n   444: u8 [a0 + 6] = 0\n   447: u8 [a0 + 5] = 0\n   450: u8 [a0 + 4] = 0\n   453: u8 [a0 + 3] = 0\n   456: u8 [a0 + 2] = 0\n   459: u8 [a0 + 1] = 0\n   462: u8 [a0 + 0] = 0\n   464: u64 [sp + 24] = 0\n   467: u64 [sp + 0] = 0\n   469: u64 [sp + 8] = 0\n   472: u64 [sp + 16] = 0\n   475: i32 a0 = sp + 0\n   477: ecalli 7 // 'value_transferred'\n   479: fallthrough\n      : @16 (gas: 8)\n   480: a0 = u64 [sp + 0x10]\n   483: a1 = u64 [sp + 0x18]\n   486: a2 = u64 [sp + 0x8]\n   489: a3 = u64 [sp]\n   491: a1 = a1 | a2\n   494: a0 = a0 | a3\n   497: a0 = a0 | a1\n   500: jump @20 if a0 != 0\n      : @17 (gas: 3)\n   504: a0 = 0x40\n   507: a1 = 0x20\n   510: ra = 10, jump @0\n      : @18 [@dyn 5] (gas: 100)\n   515: a1 = u8 [a0 + 0x11]\n   518: a2 = u8 [a0 + 0x10]\n   521: a3 = u8 [a0 + 0x12]\n   524: a4 = u8 [a0 + 0x13]\n   527: a1 = a1 << 0x8\n   530: a1 = a1 | a2\n   533: a3 = a3 << 0x10\n   536: a4 = a4 << 0x18\n   539: a3 = a3 | a4\n   542: a1 = a1 | a3\n   545: a2 = u8 [a0 + 0x15]\n   548: a3 = u8 [a0 + 0x14]\n   551: a4 = u8 [a0 + 0x16]\n   554: a5 = u8 [a0 + 0x17]\n   557: a2 = a2 << 0x8\n   560: a2 = a2 | a3\n   563: a4 = a4 << 0x10\n   566: a5 = a5 << 0x18\n   569: a4 = a4 | a5\n   572: a2 = a2 | a4\n   575: a2 = a2 << 0x20\n   578: t0 = a2 | a1\n   581: a2 = u8 [a0 + 0x1]\n   584: a3 = u8 [a0]\n   586: a4 = u8 [a0 + 0x2]\n   589: a5 = u8 [a0 + 0x3]\n   592: a2 = a2 << 0x8\n   595: a2 = a2 | a3\n   598: a4 = a4 << 0x10\n   601: a5 = a5 << 0x18\n   604: a4 = a4 | a5\n   607: a2 = a2 | a4\n   610: a3 = u8 [a0 + 0x5]\n   613: a4 = u8 [a0 + 0x4]\n   616: a5 = u8 [a0 + 0x6]\n   619: s1 = u8 [a0 + 0x7]\n   622: a3 = a3 << 0x8\n   625: a3 = a3 | a4\n   628: a5 = a5 << 0x10\n   631: s1 = s1 << 0x18\n   634: a5 = a5 | s1\n   637: a3 = a3 | a5\n   640: a3 = a3 << 0x20\n   643: a2 = a2 | a3\n   646: a3 = u8 [a0 + 0x19]\n   649: a4 = u8 [a0 + 0x18]\n   652: a5 = u8 [a0 + 0x1a]\n   655: s1 = u8 [a0 + 0x1b]\n   658: a3 = a3 << 0x8\n   661: a3 = a3 | a4\n   664: a5 = a5 << 0x10\n   667: s1 = s1 << 0x18\n   670: a5 = a5 | s1\n   673: a3 = a3 | a5\n   676: a4 = u8 [a0 + 0x1d]\n   679: a5 = u8 [a0 + 0x1c]\n   682: s1 = u8 [a0 + 0x1e]\n   685: a1 = u8 [a0 + 0x1f]\n   688: a4 = a4 << 0x8\n   691: a4 = a4 | a5\n   694: s1 = s1 << 0x10\n   697: a1 = a1 << 0x18\n   700: a1 = a1 | s1\n   703: a1 = a1 | a4\n   706: a1 = a1 << 0x20\n   709: a3 = a3 | a1\n   712: a1 = u8 [a0 + 0x9]\n   715: a4 = u8 [a0 + 0x8]\n   718: a5 = u8 [a0 + 0xa]\n   721: s1 = u8 [a0 + 0xb]\n   724: a1 = a1 << 0x8\n   727: a1 = a1 | a4\n   730: a5 = a5 << 0x10\n   733: s1 = s1 << 0x18\n   736: a5 = a5 | s1\n   739: a1 = a1 | a5\n   742: a4 = u8 [a0 + 0xd]\n   745: a5 = u8 [a0 + 0xc]\n   748: s1 = u8 [a0 + 0xe]\n   751: a0 = u8 [a0 + 0xf]\n   754: a4 = a4 << 0x8\n   757: a4 = a4 | a5\n   760: s1 = s1 << 0x10\n   763: a0 = a0 << 0x18\n   766: a0 = a0 | s1\n   769: a0 = a0 | a4\n   772: a0 = a0 << 0x20\n   775: a0 = a0 | a1\n   778: a0 = reverse a0\n   780: s1 = reverse a3\n   782: a1 = reverse a2\n   784: a2 = reverse t0\n   786: a1 = a1 | a2\n   789: a2 = s1 | a0\n   792: a2 = a2 | a1\n   795: a2 = a2 >> 0x20\n   798: a0 = a0 | a1\n   801: a0 = a0 << 0x20\n   804: a0 = a0 | a2\n   807: jump @22 if a0 == 0\n      : @19 (gas: 1)\n   810: trap\n      : @20 (gas: 3)\n   811: a0 = 0\n   813: a1 = 0\n   815: ra = 12, jump @0\n      : @21 [@dyn 6] (gas: 5)\n   820: i32 a1 = a0 + 0\n   822: a0 = 0x1\n   825: a2 = 0\n   827: ecalli 4 // 'seal_return'\n   829: fallthrough\n      : @22 (gas: 4)\n   830: i32 s1 = s1 + 0\n   832: a0 = s1\n   834: a1 = 0\n   836: ra = 14, jump @0\n      : @23 [@dyn 7] (gas: 5)\n   841: i32 a0 = a0 + 0\n   843: a1 = 0\n   845: a2 = 0\n   847: ecalli 0 // 'call_data_copy'\n   848: fallthrough\n      : @24 (gas: 2)\n   849: a1 = i32 [0x20008]\n   854: jump @26 if a1 == 0\n      : @25 (gas: 4)\n   857: a0 = 0x30010\n   862: i32 a0 = a0 + 0\n   864: ecalli 5 // 'set_immutable_data'\n   866: fallthrough\n      : @26 (gas: 3)\n   867: a0 = s1\n   869: a1 = 0\n   871: ra = 16, jump @0\n      : @27 [@dyn 8] (gas: 6)\n   876: i32 a1 = a0 + 0\n   878: a0 = 0\n   880: a2 = 0\n   882: ra = 0x12\n   885: ecalli 4 // 'seal_return'\n   887: fallthrough\n      : @28 [@dyn 9] (gas: 8)\n   888: sp = sp + 0xffffffffffffffc0\n   891: u64 [sp + 0x38] = ra\n   894: u64 [sp + 0x30] = s0\n   897: s0 = sp + 0x40\n   900: sp = sp & 0xffffffffffffffe0\n   903: a0 = 0x40\n   906: a1 = 0x20\n   909: ra = 20, jump @0\n      : @29 [@dyn 10] (gas: 34)\n   914: u8 [a0 + 31] = 0x80\n   919: u8 [a0 + 30] = 0\n   922: u8 [a0 + 29] = 0\n   925: u8 [a0 + 28] = 0\n   928: u8 [a0 + 27] = 0\n   931: u8 [a0 + 26] = 0\n   934: u8 [a0 + 25] = 0\n   937: u8 [a0 + 24] = 0\n   940: u8 [a0 + 23] = 0\n   943: u8 [a0 + 22] = 0\n   946: u8 [a0 + 21] = 0\n   949: u8 [a0 + 20] = 0\n   952: u8 [a0 + 19] = 0\n   955: u8 [a0 + 18] = 0\n   958: u8 [a0 + 17] = 0\n   961: u8 [a0 + 16] = 0\n   964: u8 [a0 + 15] = 0\n   967: u8 [a0 + 14] = 0\n   970: u8 [a0 + 13] = 0\n   973: u8 [a0 + 12] = 0\n   976: u8 [a0 + 11] = 0\n   979: u8 [a0 + 10] = 0\n   982: u8 [a0 + 9] = 0\n   985: u8 [a0 + 8] = 0\n   988: u8 [a0 + 7] = 0\n   991: u8 [a0 + 3] = 0\n   994: u8 [a0 + 2] = 0\n   997: u8 [a0 + 1] = 0\n  1000: u8 [a0 + 0] = 0\n  1002: a1 = i32 [0x20004]\n  1007: u8 [a0 + 6] = 0\n  1010: u8 [a0 + 5] = 0\n  1013: u8 [a0 + 4] = 0\n  1016: jump @35 if a1 <u 4\n      : @30 (gas: 4)\n  1020: i32 a0 = sp + 0\n  1022: a1 = 0\n  1024: ecalli 1 // 'call_data_load'\n  1026: fallthrough\n      : @31 (gas: 2)\n  1027: a0 = i32 [sp + 0x1c]\n  1030: jump @37 if a0 == 3500007562\n      : @32 (gas: 1)\n  1037: jump @36 if a0 == 1067774533\n      : @33 (gas: 1)\n  1044: jump @35 if a0 != 1428426871\n      : @34 (gas: 14)\n  1051: ra = 0x16\n  1054: sp = sp + 0xffffffffffffff40\n  1058: u64 [sp + 0xb8] = ra\n  1062: u64 [sp + 0xb0] = s0\n  1066: u64 [sp + 0xa8] = s1\n  1070: s0 = sp + 0xc0\n  1074: sp = sp & 0xffffffffffffffe0\n  1077: u64 [sp + 56] = 0\n  1080: u64 [sp + 48] = 0\n  1083: u64 [sp + 40] = 0\n  1086: u64 [sp + 32] = 0\n  1089: i32 a0 = sp + 0x20\n  1092: ecalli 7 // 'value_transferred'\n  1094: jump @51\n      : @35 [@dyn 11] (gas: 1)\n  1097: ra = 24, jump @71\n      : @36 [@dyn 12] (gas: 14)\n  1102: ra = 0x1a\n  1105: sp = sp + 0xffffffffffffff60\n  1109: u64 [sp + 0x98] = ra\n  1113: u64 [sp + 0x90] = s0\n  1117: u64 [sp + 0x88] = s1\n  1121: s0 = sp + 0xa0\n  1125: sp = sp & 0xffffffffffffffe0\n  1128: u64 [sp + 56] = 0\n  1131: u64 [sp + 48] = 0\n  1134: u64 [sp + 40] = 0\n  1137: u64 [sp + 32] = 0\n  1140: i32 a0 = sp + 0x20\n  1143: ecalli 7 // 'value_transferred'\n  1145: jump @40\n      : @37 [@dyn 13] (gas: 1)\n  1148: ra = 28, jump @60\n      : @38 [@dyn 14] (gas: 7)\n  1153: sp = sp + 0xfffffffffffffff0\n  1156: u64 [sp + 0x8] = ra\n  1159: u64 [sp] = s0\n  1161: s0 = a0\n  1163: a0 = 0x40\n  1166: a1 = 0x20\n  1169: ra = 30, jump @0\n      : @39 [@dyn 15] (gas: 100)\n  1174: a1 = u8 [a0 + 0x1]\n  1177: a2 = u8 [a0]\n  1179: a3 = u8 [a0 + 0x2]\n  1182: a4 = u8 [a0 + 0x3]\n  1185: a1 = a1 << 0x8\n  1188: a1 = a1 | a2\n  1191: a3 = a3 << 0x10\n  1194: a4 = a4 << 0x18\n  1197: a3 = a3 | a4\n  1200: a1 = a1 | a3\n  1203: a2 = u8 [a0 + 0x5]\n  1206: a3 = u8 [a0 + 0x4]\n  1209: a4 = u8 [a0 + 0x6]\n  1212: a5 = u8 [a0 + 0x7]\n  1215: a2 = a2 << 0x8\n  1218: a2 = a2 | a3\n  1221: a4 = a4 << 0x10\n  1224: a5 = a5 << 0x18\n  1227: a4 = a4 | a5\n  1230: a2 = a2 | a4\n  1233: a2 = a2 << 0x20\n  1236: t0 = a2 | a1\n  1239: a2 = u8 [a0 + 0x9]\n  1242: a3 = u8 [a0 + 0x8]\n  1245: a4 = u8 [a0 + 0xa]\n  1248: a5 = u8 [a0 + 0xb]\n  1251: a2 = a2 << 0x8\n  1254: a2 = a2 | a3\n  1257: a4 = a4 << 0x10\n  1260: a5 = a5 << 0x18\n  1263: a4 = a4 | a5\n  1266: a2 = a2 | a4\n  1269: a3 = u8 [a0 + 0xd]\n  1272: a4 = u8 [a0 + 0xc]\n  1275: a5 = u8 [a0 + 0xe]\n  1278: a1 = u8 [a0 + 0xf]\n  1281: a3 = a3 << 0x8\n  1284: a3 = a3 | a4\n  1287: a5 = a5 << 0x10\n  1290: a1 = a1 << 0x18\n  1293: a1 = a1 | a5\n  1296: a1 = a1 | a3\n  1299: a1 = a1 << 0x20\n  1302: t1 = a1 | a2\n  1305: a1 = u8 [a0 + 0x11]\n  1308: a3 = u8 [a0 + 0x10]\n  1311: a4 = u8 [a0 + 0x12]\n  1314: a5 = u8 [a0 + 0x13]\n  1317: a1 = a1 << 0x8\n  1320: a1 = a1 | a3\n  1323: a4 = a4 << 0x10\n  1326: a5 = a5 << 0x18\n  1329: a4 = a4 | a5\n  1332: a1 = a1 | a4\n  1335: a3 = u8 [a0 + 0x15]\n  1338: a4 = u8 [a0 + 0x14]\n  1341: a5 = u8 [a0 + 0x16]\n  1344: a2 = u8 [a0 + 0x17]\n  1347: a3 = a3 << 0x8\n  1350: a3 = a3 | a4\n  1353: a5 = a5 << 0x10\n  1356: a2 = a2 << 0x18\n  1359: a2 = a2 | a5\n  1362: a2 = a2 | a3\n  1365: a2 = a2 << 0x20\n  1368: a3 = a2 | a1\n  1371: a1 = u8 [a0 + 0x19]\n  1374: a2 = u8 [a0 + 0x18]\n  1377: a4 = u8 [a0 + 0x1a]\n  1380: a5 = u8 [a0 + 0x1b]\n  1383: a1 = a1 << 0x8\n  1386: a1 = a1 | a2\n  1389: a4 = a4 << 0x10\n  1392: a5 = a5 << 0x18\n  1395: a4 = a4 | a5\n  1398: a1 = a1 | a4\n  1401: a2 = u8 [a0 + 0x1d]\n  1404: a4 = u8 [a0 + 0x1c]\n  1407: a5 = u8 [a0 + 0x1e]\n  1410: a0 = u8 [a0 + 0x1f]\n  1413: a2 = a2 << 0x8\n  1416: a2 = a2 | a4\n  1419: a5 = a5 << 0x10\n  1422: a0 = a0 << 0x18\n  1425: a0 = a0 | a5\n  1428: a0 = a0 | a2\n  1431: a0 = a0 << 0x20\n  1434: a0 = a0 | a1\n  1437: a0 = reverse a0\n  1439: a1 = reverse a3\n  1441: a2 = reverse t1\n  1443: a3 = reverse t0\n  1445: u64 [s0 + 0x18] = a3\n  1448: u64 [s0 + 0x10] = a2\n  1451: u64 [s0 + 0x8] = a1\n  1454: u64 [s0] = a0\n  1456: ra = u64 [sp + 0x8]\n  1459: s0 = u64 [sp]\n  1461: sp = sp + 0x10\n  1464: ret\n      : @40 (gas: 8)\n  1466: a0 = u64 [sp + 0x30]\n  1469: a1 = u64 [sp + 0x38]\n  1472: a2 = u64 [sp + 0x28]\n  1475: a3 = u64 [sp + 0x20]\n  1478: a1 = a1 | a2\n  1481: a0 = a0 | a3\n  1484: a0 = a0 | a1\n  1487: jump @45 if a0 != 0\n      : @41 (gas: 2)\n  1491: a0 = i32 [0x20004]\n  1496: jump @45 if a0 <=u 3\n      : @42 (gas: 26)\n  1501: u64 [sp + 88] = 0\n  1504: u64 [sp + 80] = 0\n  1507: u64 [sp + 72] = 0\n  1510: u64 [sp + 64] = 0\n  1513: u64 [sp + 120] = 0\n  1516: u64 [sp + 112] = 0\n  1519: u64 [sp + 104] = 0\n  1522: u64 [sp + 96] = 0\n  1525: u32 [sp + 128] = 0x20\n  1530: i32 a1 = sp + 0x40\n  1533: i32 a3 = sp + 0x60\n  1536: i32 a4 = sp + 0x80\n  1540: a2 = 0xffffffffffffffff\n  1543: a0 = 0\n  1545: ecalli 3 // 'get_storage'\n  1547: a0 = u64 [sp + 0x78]\n  1550: u64 [sp] = a0\n  1552: a0 = u64 [sp + 0x70]\n  1555: u64 [sp + 0x8] = a0\n  1558: a0 = u64 [sp + 0x68]\n  1561: u64 [sp + 0x10] = a0\n  1564: a0 = u64 [sp + 0x60]\n  1567: u64 [sp + 0x18] = a0\n  1570: a0 = 0x40\n  1573: a1 = 0x20\n  1576: ra = 32, jump @0\n      : @43 [@dyn 16] (gas: 100)\n  1581: a1 = u8 [a0 + 0x11]\n  1584: a2 = u8 [a0 + 0x10]\n  1587: a3 = u8 [a0 + 0x12]\n  1590: a4 = u8 [a0 + 0x13]\n  1593: a1 = a1 << 0x8\n  1596: a1 = a1 | a2\n  1599: a3 = a3 << 0x10\n  1602: a4 = a4 << 0x18\n  1605: a3 = a3 | a4\n  1608: a1 = a1 | a3\n  1611: a2 = u8 [a0 + 0x15]\n  1614: a3 = u8 [a0 + 0x14]\n  1617: a4 = u8 [a0 + 0x16]\n  1620: a5 = u8 [a0 + 0x17]\n  1623: a2 = a2 << 0x8\n  1626: a2 = a2 | a3\n  1629: a4 = a4 << 0x10\n  1632: a5 = a5 << 0x18\n  1635: a4 = a4 | a5\n  1638: a2 = a2 | a4\n  1641: a2 = a2 << 0x20\n  1644: t0 = a2 | a1\n  1647: a2 = u8 [a0 + 0x1]\n  1650: a3 = u8 [a0]\n  1652: a4 = u8 [a0 + 0x2]\n  1655: a5 = u8 [a0 + 0x3]\n  1658: a2 = a2 << 0x8\n  1661: a2 = a2 | a3\n  1664: a4 = a4 << 0x10\n  1667: a5 = a5 << 0x18\n  1670: a4 = a4 | a5\n  1673: a2 = a2 | a4\n  1676: a3 = u8 [a0 + 0x5]\n  1679: a4 = u8 [a0 + 0x4]\n  1682: a5 = u8 [a0 + 0x6]\n  1685: s1 = u8 [a0 + 0x7]\n  1688: a3 = a3 << 0x8\n  1691: a3 = a3 | a4\n  1694: a5 = a5 << 0x10\n  1697: s1 = s1 << 0x18\n  1700: a5 = a5 | s1\n  1703: a3 = a3 | a5\n  1706: a3 = a3 << 0x20\n  1709: a2 = a2 | a3\n  1712: a3 = u8 [a0 + 0x19]\n  1715: a4 = u8 [a0 + 0x18]\n  1718: a5 = u8 [a0 + 0x1a]\n  1721: s1 = u8 [a0 + 0x1b]\n  1724: a3 = a3 << 0x8\n  1727: a3 = a3 | a4\n  1730: a5 = a5 << 0x10\n  1733: s1 = s1 << 0x18\n  1736: a5 = a5 | s1\n  1739: a3 = a3 | a5\n  1742: a4 = u8 [a0 + 0x1d]\n  1745: a5 = u8 [a0 + 0x1c]\n  1748: s1 = u8 [a0 + 0x1e]\n  1751: a1 = u8 [a0 + 0x1f]\n  1754: a4 = a4 << 0x8\n  1757: a4 = a4 | a5\n  1760: s1 = s1 << 0x10\n  1763: a1 = a1 << 0x18\n  1766: a1 = a1 | s1\n  1769: a1 = a1 | a4\n  1772: a1 = a1 << 0x20\n  1775: a3 = a3 | a1\n  1778: a1 = u8 [a0 + 0x9]\n  1781: a4 = u8 [a0 + 0x8]\n  1784: a5 = u8 [a0 + 0xa]\n  1787: s1 = u8 [a0 + 0xb]\n  1790: a1 = a1 << 0x8\n  1793: a1 = a1 | a4\n  1796: a5 = a5 << 0x10\n  1799: s1 = s1 << 0x18\n  1802: a5 = a5 | s1\n  1805: a1 = a1 | a5\n  1808: a4 = u8 [a0 + 0xd]\n  1811: a5 = u8 [a0 + 0xc]\n  1814: s1 = u8 [a0 + 0xe]\n  1817: a0 = u8 [a0 + 0xf]\n  1820: a4 = a4 << 0x8\n  1823: a4 = a4 | a5\n  1826: s1 = s1 << 0x10\n  1829: a0 = a0 << 0x18\n  1832: a0 = a0 | s1\n  1835: a0 = a0 | a4\n  1838: a0 = a0 << 0x20\n  1841: a0 = a0 | a1\n  1844: a1 = reverse a0\n  1846: a0 = reverse a3\n  1848: a2 = reverse a2\n  1850: a3 = reverse t0\n  1852: a2 = a2 | a3\n  1855: a3 = a0 | a1\n  1858: a3 = a3 | a2\n  1861: a3 = a3 >> 0x20\n  1864: a1 = a1 | a2\n  1867: a1 = a1 << 0x20\n  1870: a1 = a1 | a3\n  1873: jump @47 if a1 == 0\n      : @44 (gas: 1)\n  1876: trap\n      : @45 (gas: 3)\n  1877: a0 = 0\n  1879: a1 = 0\n  1881: ra = 34, jump @0\n      : @46 [@dyn 17] (gas: 5)\n  1886: i32 a1 = a0 + 0\n  1888: a0 = 0x1\n  1891: a2 = 0\n  1893: ecalli 4 // 'seal_return'\n  1895: fallthrough\n      : @47 (gas: 4)\n  1896: i32 s1 = a0 + 0\n  1898: a1 = 0x20\n  1901: a0 = s1\n  1903: ra = 36, jump @0\n      : @48 [@dyn 18] (gas: 71)\n  1908: a1 = u64 [sp]\n  1910: a1 = reverse a1\n  1912: a2 = u64 [sp + 0x8]\n  1915: a2 = reverse a2\n  1917: a3 = u64 [sp + 0x10]\n  1920: a3 = reverse a3\n  1922: a4 = u64 [sp + 0x18]\n  1925: a4 = reverse a4\n  1927: a5 = a4 >> 0x38\n  1930: u8 [a0 + 0x1f] = a5\n  1933: a5 = a4 >> 0x30\n  1936: u8 [a0 + 0x1e] = a5\n  1939: a5 = a4 >> 0x28\n  1942: u8 [a0 + 0x1d] = a5\n  1945: a5 = a4 >> 0x20\n  1948: u8 [a0 + 0x1c] = a5\n  1951: a5 = a4 >> 0x18\n  1954: u8 [a0 + 0x1b] = a5\n  1957: a5 = a4 >> 0x10\n  1960: u8 [a0 + 0x1a] = a5\n  1963: a5 = a4 >> 0x8\n  1966: u8 [a0 + 0x19] = a5\n  1969: u8 [a0 + 0x18] = a4\n  1972: u8 [a0 + 0x10] = a3\n  1975: a4 = a3 >> 0x38\n  1978: u8 [a0 + 0x17] = a4\n  1981: a4 = a3 >> 0x30\n  1984: u8 [a0 + 0x16] = a4\n  1987: a4 = a3 >> 0x28\n  1990: u8 [a0 + 0x15] = a4\n  1993: a4 = a3 >> 0x20\n  1996: u8 [a0 + 0x14] = a4\n  1999: a4 = a3 >> 0x18\n  2002: u8 [a0 + 0x13] = a4\n  2005: a4 = a3 >> 0x10\n  2008: u8 [a0 + 0x12] = a4\n  2011: a3 = a3 >> 0x8\n  2014: u8 [a0 + 0x11] = a3\n  2017: u8 [a0 + 0x8] = a2\n  2020: a3 = a2 >> 0x38\n  2023: u8 [a0 + 0xf] = a3\n  2026: a3 = a2 >> 0x30\n  2029: u8 [a0 + 0xe] = a3\n  2032: a3 = a2 >> 0x28\n  2035: u8 [a0 + 0xd] = a3\n  2038: a3 = a2 >> 0x20\n  2041: u8 [a0 + 0xc] = a3\n  2044: a3 = a2 >> 0x18\n  2047: u8 [a0 + 0xb] = a3\n  2050: a3 = a2 >> 0x10\n  2053: u8 [a0 + 0xa] = a3\n  2056: a2 = a2 >> 0x8\n  2059: u8 [a0 + 0x9] = a2\n  2062: u8 [a0] = a1\n  2064: a2 = a1 >> 0x38\n  2067: u8 [a0 + 0x7] = a2\n  2070: a2 = a1 >> 0x30\n  2073: u8 [a0 + 0x6] = a2\n  2076: a2 = a1 >> 0x28\n  2079: u8 [a0 + 0x5] = a2\n  2082: a2 = a1 >> 0x20\n  2085: u8 [a0 + 0x4] = a2\n  2088: a2 = a1 >> 0x18\n  2091: u8 [a0 + 0x3] = a2\n  2094: a2 = a1 >> 0x10\n  2097: u8 [a0 + 0x2] = a2\n  2100: a1 = a1 >> 0x8\n  2103: u8 [a0 + 0x1] = a1\n  2106: a1 = 0x20\n  2109: a0 = s1\n  2111: ra = 38, jump @0\n      : @49 [@dyn 19] (gas: 6)\n  2116: i32 a1 = a0 + 0\n  2118: a2 = 0x20\n  2121: a0 = 0\n  2123: ra = 0x28\n  2126: ecalli 4 // 'seal_return'\n  2128: fallthrough\n      : @50 [@dyn 20] (gas: 1)\n  2129: ret\n      : @51 (gas: 8)\n  2131: a0 = u64 [sp + 0x30]\n  2134: a1 = u64 [sp + 0x38]\n  2137: a2 = u64 [sp + 0x28]\n  2140: a3 = u64 [sp + 0x20]\n  2143: a1 = a1 | a2\n  2146: a0 = a0 | a3\n  2149: a0 = a0 | a1\n  2152: jump @56 if a0 != 0\n      : @52 (gas: 2)\n  2156: a0 = i32 [0x20004]\n  2161: jump @56 if a0 <=u 35\n      : @53 (gas: 45)\n  2166: i32 a0 = sp + 0x80\n  2170: a1 = 0x4\n  2173: ecalli 1 // 'call_data_load'\n  2175: a0 = u64 [sp + 0x80]\n  2179: u64 [sp + 0x18] = a0\n  2182: a0 = u64 [sp + 0x88]\n  2186: u64 [sp + 0x10] = a0\n  2189: a0 = u64 [sp + 0x90]\n  2193: u64 [sp + 0x8] = a0\n  2196: s1 = u64 [sp + 0x98]\n  2200: u64 [sp + 120] = 0\n  2203: u64 [sp + 112] = 0\n  2206: u64 [sp + 104] = 0\n  2209: u64 [sp + 96] = 0\n  2212: u64 [sp + 152] = 0\n  2216: u64 [sp + 144] = 0\n  2220: u64 [sp + 136] = 0\n  2224: u64 [sp + 128] = 0\n  2228: u32 [sp + 64] = 0x20\n  2232: i32 a1 = sp + 0x60\n  2235: i32 a3 = sp + 0x80\n  2239: i32 a4 = sp + 0x40\n  2242: a2 = 0xffffffffffffffff\n  2245: a0 = 0\n  2247: ecalli 3 // 'get_storage'\n  2249: u64 [sp + 120] = 0\n  2252: u64 [sp + 112] = 0\n  2255: u64 [sp + 104] = 0\n  2258: u64 [sp + 96] = 0\n  2261: u64 [sp + 0x98] = s1\n  2265: a0 = u64 [sp + 0x8]\n  2268: u64 [sp + 0x90] = a0\n  2272: a0 = u64 [sp + 0x10]\n  2275: u64 [sp + 0x88] = a0\n  2279: a0 = u64 [sp + 0x18]\n  2282: u64 [sp + 0x80] = a0\n  2286: i32 a1 = sp + 0x60\n  2289: i32 a3 = sp + 0x80\n  2293: a2 = 0xffffffffffffffff\n  2296: a4 = 0x20\n  2299: a0 = 0\n  2301: ecalli 6 // 'set_storage'\n  2303: a0 = 0x40\n  2306: a1 = 0x20\n  2309: ra = 42, jump @0\n      : @54 [@dyn 21] (gas: 100)\n  2314: a1 = u8 [a0 + 0x11]\n  2317: a2 = u8 [a0 + 0x10]\n  2320: a3 = u8 [a0 + 0x12]\n  2323: a4 = u8 [a0 + 0x13]\n  2326: a1 = a1 << 0x8\n  2329: a1 = a1 | a2\n  2332: a3 = a3 << 0x10\n  2335: a4 = a4 << 0x18\n  2338: a3 = a3 | a4\n  2341: a1 = a1 | a3\n  2344: a2 = u8 [a0 + 0x15]\n  2347: a3 = u8 [a0 + 0x14]\n  2350: a4 = u8 [a0 + 0x16]\n  2353: a5 = u8 [a0 + 0x17]\n  2356: a2 = a2 << 0x8\n  2359: a2 = a2 | a3\n  2362: a4 = a4 << 0x10\n  2365: a5 = a5 << 0x18\n  2368: a4 = a4 | a5\n  2371: a2 = a2 | a4\n  2374: a2 = a2 << 0x20\n  2377: t0 = a2 | a1\n  2380: a2 = u8 [a0 + 0x1]\n  2383: a3 = u8 [a0]\n  2385: a4 = u8 [a0 + 0x2]\n  2388: a5 = u8 [a0 + 0x3]\n  2391: a2 = a2 << 0x8\n  2394: a2 = a2 | a3\n  2397: a4 = a4 << 0x10\n  2400: a5 = a5 << 0x18\n  2403: a4 = a4 | a5\n  2406: a2 = a2 | a4\n  2409: a3 = u8 [a0 + 0x5]\n  2412: a4 = u8 [a0 + 0x4]\n  2415: a5 = u8 [a0 + 0x6]\n  2418: s1 = u8 [a0 + 0x7]\n  2421: a3 = a3 << 0x8\n  2424: a3 = a3 | a4\n  2427: a5 = a5 << 0x10\n  2430: s1 = s1 << 0x18\n  2433: a5 = a5 | s1\n  2436: a3 = a3 | a5\n  2439: a3 = a3 << 0x20\n  2442: a2 = a2 | a3\n  2445: a3 = u8 [a0 + 0x19]\n  2448: a4 = u8 [a0 + 0x18]\n  2451: a5 = u8 [a0 + 0x1a]\n  2454: s1 = u8 [a0 + 0x1b]\n  2457: a3 = a3 << 0x8\n  2460: a3 = a3 | a4\n  2463: a5 = a5 << 0x10\n  2466: s1 = s1 << 0x18\n  2469: a5 = a5 | s1\n  2472: a3 = a3 | a5\n  2475: a4 = u8 [a0 + 0x1d]\n  2478: a5 = u8 [a0 + 0x1c]\n  2481: s1 = u8 [a0 + 0x1e]\n  2484: a1 = u8 [a0 + 0x1f]\n  2487: a4 = a4 << 0x8\n  2490: a4 = a4 | a5\n  2493: s1 = s1 << 0x10\n  2496: a1 = a1 << 0x18\n  2499: a1 = a1 | s1\n  2502: a1 = a1 | a4\n  2505: a1 = a1 << 0x20\n  2508: a3 = a3 | a1\n  2511: a1 = u8 [a0 + 0x9]\n  2514: a4 = u8 [a0 + 0x8]\n  2517: a5 = u8 [a0 + 0xa]\n  2520: s1 = u8 [a0 + 0xb]\n  2523: a1 = a1 << 0x8\n  2526: a1 = a1 | a4\n  2529: a5 = a5 << 0x10\n  2532: s1 = s1 << 0x18\n  2535: a5 = a5 | s1\n  2538: a1 = a1 | a5\n  2541: a4 = u8 [a0 + 0xd]\n  2544: a5 = u8 [a0 + 0xc]\n  2547: s1 = u8 [a0 + 0xe]\n  2550: a0 = u8 [a0 + 0xf]\n  2553: a4 = a4 << 0x8\n  2556: a4 = a4 | a5\n  2559: s1 = s1 << 0x10\n  2562: a0 = a0 << 0x18\n  2565: a0 = a0 | s1\n  2568: a0 = a0 | a4\n  2571: a0 = a0 << 0x20\n  2574: a0 = a0 | a1\n  2577: a1 = reverse a0\n  2579: a0 = reverse a3\n  2581: a2 = reverse a2\n  2583: a3 = reverse t0\n  2585: a2 = a2 | a3\n  2588: a3 = a0 | a1\n  2591: a3 = a3 | a2\n  2594: a3 = a3 >> 0x20\n  2597: a1 = a1 | a2\n  2600: a1 = a1 << 0x20\n  2603: a1 = a1 | a3\n  2606: jump @58 if a1 == 0\n      : @55 (gas: 1)\n  2609: trap\n      : @56 (gas: 3)\n  2610: a0 = 0\n  2612: a1 = 0\n  2614: ra = 44, jump @0\n      : @57 [@dyn 22] (gas: 7)\n  2619: i32 a1 = a0 + 0\n  2621: a0 = 0x1\n  2624: a2 = 0\n  2626: ecalli 4 // 'seal_return'\n  2628: i32 a0 = a0 + 0\n  2630: ra = 0x2e\n  2633: jump @0\n      : @58 (gas: 2)\n  2636: i32 a0 = a0 + 0\n  2638: ra = 46, jump @0\n      : @59 [@dyn 23] (gas: 6)\n  2643: i32 a1 = a0 + 0\n  2645: a0 = 0\n  2647: a2 = 0\n  2649: ra = 0x30\n  2652: ecalli 4 // 'seal_return'\n  2654: fallthrough\n      : @60 [@dyn 24] (gas: 12)\n  2655: sp = sp + 0xffffffffffffffc0\n  2658: u64 [sp + 0x38] = ra\n  2661: u64 [sp + 0x30] = s0\n  2664: s0 = sp + 0x40\n  2667: sp = sp & 0xffffffffffffffe0\n  2670: u64 [sp + 24] = 0\n  2673: u64 [sp + 16] = 0\n  2676: u64 [sp + 8] = 0\n  2679: u64 [sp + 0] = 0\n  2681: i32 a0 = sp + 0\n  2683: ecalli 7 // 'value_transferred'\n  2685: fallthrough\n      : @61 (gas: 8)\n  2686: a0 = u64 [sp + 0x10]\n  2689: a1 = u64 [sp + 0x18]\n  2692: a2 = u64 [sp + 0x8]\n  2695: a3 = u64 [sp]\n  2697: a1 = a1 | a2\n  2700: a0 = a0 | a3\n  2703: a0 = a0 | a1\n  2706: jump @67 if a0 != 0\n      : @62 (gas: 2)\n  2710: a0 = i32 [0x20004]\n  2715: jump @67 if a0 <=u 3\n      : @63 (gas: 23)\n  2720: ra = 0x32\n  2723: sp = sp + 0xffffffffffffff20\n  2727: u64 [sp + 0xd8] = ra\n  2731: u64 [sp + 0xd0] = s0\n  2735: u64 [sp + 0xc8] = s1\n  2739: s0 = sp + 0xe0\n  2743: sp = sp & 0xffffffffffffffe0\n  2746: u64 [sp + 152] = 0\n  2750: u64 [sp + 144] = 0\n  2754: u64 [sp + 136] = 0\n  2758: u64 [sp + 128] = 0\n  2762: u64 [sp + 184] = 0\n  2766: u64 [sp + 176] = 0\n  2770: u64 [sp + 168] = 0\n  2774: u64 [sp + 160] = 0\n  2778: u32 [sp + 96] = 0x20\n  2782: i32 a1 = sp + 0x80\n  2786: i32 a3 = sp + 0xa0\n  2790: i32 a4 = sp + 0x60\n  2793: a2 = 0xffffffffffffffff\n  2796: a0 = 0\n  2798: ecalli 3 // 'get_storage'\n  2800: jump @74\n      : @64 [@dyn 25] (gas: 3)\n  2803: a0 = 0x40\n  2806: a1 = 0x20\n  2809: ra = 52, jump @0\n      : @65 [@dyn 26] (gas: 100)\n  2814: a1 = u8 [a0 + 0x11]\n  2817: a2 = u8 [a0 + 0x10]\n  2820: a3 = u8 [a0 + 0x12]\n  2823: a4 = u8 [a0 + 0x13]\n  2826: a1 = a1 << 0x8\n  2829: a1 = a1 | a2\n  2832: a3 = a3 << 0x10\n  2835: a4 = a4 << 0x18\n  2838: a3 = a3 | a4\n  2841: a1 = a1 | a3\n  2844: a2 = u8 [a0 + 0x15]\n  2847: a3 = u8 [a0 + 0x14]\n  2850: a4 = u8 [a0 + 0x16]\n  2853: a5 = u8 [a0 + 0x17]\n  2856: a2 = a2 << 0x8\n  2859: a2 = a2 | a3\n  2862: a4 = a4 << 0x10\n  2865: a5 = a5 << 0x18\n  2868: a4 = a4 | a5\n  2871: a2 = a2 | a4\n  2874: a2 = a2 << 0x20\n  2877: t0 = a2 | a1\n  2880: a2 = u8 [a0 + 0x1]\n  2883: a3 = u8 [a0]\n  2885: a4 = u8 [a0 + 0x2]\n  2888: a5 = u8 [a0 + 0x3]\n  2891: a2 = a2 << 0x8\n  2894: a2 = a2 | a3\n  2897: a4 = a4 << 0x10\n  2900: a5 = a5 << 0x18\n  2903: a4 = a4 | a5\n  2906: a2 = a2 | a4\n  2909: a3 = u8 [a0 + 0x5]\n  2912: a4 = u8 [a0 + 0x4]\n  2915: a5 = u8 [a0 + 0x6]\n  2918: a1 = u8 [a0 + 0x7]\n  2921: a3 = a3 << 0x8\n  2924: a3 = a3 | a4\n  2927: a5 = a5 << 0x10\n  2930: a1 = a1 << 0x18\n  2933: a1 = a1 | a5\n  2936: a1 = a1 | a3\n  2939: a1 = a1 << 0x20\n  2942: t1 = a1 | a2\n  2945: a1 = u8 [a0 + 0x19]\n  2948: a3 = u8 [a0 + 0x18]\n  2951: a4 = u8 [a0 + 0x1a]\n  2954: a5 = u8 [a0 + 0x1b]\n  2957: a1 = a1 << 0x8\n  2960: a1 = a1 | a3\n  2963: a4 = a4 << 0x10\n  2966: a5 = a5 << 0x18\n  2969: a4 = a4 | a5\n  2972: a1 = a1 | a4\n  2975: a3 = u8 [a0 + 0x1d]\n  2978: a4 = u8 [a0 + 0x1c]\n  2981: a5 = u8 [a0 + 0x1e]\n  2984: a2 = u8 [a0 + 0x1f]\n  2987: a3 = a3 << 0x8\n  2990: a3 = a3 | a4\n  2993: a5 = a5 << 0x10\n  2996: a2 = a2 << 0x18\n  2999: a2 = a2 | a5\n  3002: a2 = a2 | a3\n  3005: a2 = a2 << 0x20\n  3008: a3 = a2 | a1\n  3011: a1 = u8 [a0 + 0x9]\n  3014: a2 = u8 [a0 + 0x8]\n  3017: a4 = u8 [a0 + 0xa]\n  3020: a5 = u8 [a0 + 0xb]\n  3023: a1 = a1 << 0x8\n  3026: a1 = a1 | a2\n  3029: a4 = a4 << 0x10\n  3032: a5 = a5 << 0x18\n  3035: a4 = a4 | a5\n  3038: a1 = a1 | a4\n  3041: a2 = u8 [a0 + 0xd]\n  3044: a4 = u8 [a0 + 0xc]\n  3047: a5 = u8 [a0 + 0xe]\n  3050: a0 = u8 [a0 + 0xf]\n  3053: a2 = a2 << 0x8\n  3056: a2 = a2 | a4\n  3059: a5 = a5 << 0x10\n  3062: a0 = a0 << 0x18\n  3065: a0 = a0 | a5\n  3068: a0 = a0 | a2\n  3071: a0 = a0 << 0x20\n  3074: a0 = a0 | a1\n  3077: a1 = reverse a0\n  3079: a0 = reverse a3\n  3081: a2 = reverse t1\n  3083: a3 = reverse t0\n  3085: a2 = a2 | a3\n  3088: a3 = a0 | a1\n  3091: a3 = a3 | a2\n  3094: a3 = a3 >> 0x20\n  3097: a1 = a1 | a2\n  3100: a1 = a1 << 0x20\n  3103: a1 = a1 | a3\n  3106: jump @69 if a1 == 0\n      : @66 (gas: 1)\n  3109: trap\n      : @67 (gas: 3)\n  3110: a0 = 0\n  3112: a1 = 0\n  3114: ra = 54, jump @0\n      : @68 [@dyn 27] (gas: 7)\n  3119: i32 a1 = a0 + 0\n  3121: a0 = 0x1\n  3124: a2 = 0\n  3126: ecalli 4 // 'seal_return'\n  3128: i32 a0 = a0 + 0\n  3130: ra = 0x38\n  3133: jump @0\n      : @69 (gas: 2)\n  3136: i32 a0 = a0 + 0\n  3138: ra = 56, jump @0\n      : @70 [@dyn 28] (gas: 6)\n  3143: i32 a1 = a0 + 0\n  3145: a0 = 0\n  3147: a2 = 0\n  3149: ra = 0x3a\n  3152: ecalli 4 // 'seal_return'\n  3154: fallthrough\n      : @71 [@dyn 29] (gas: 5)\n  3155: sp = sp + 0xfffffffffffffff8\n  3158: u64 [sp] = ra\n  3160: a0 = 0\n  3162: a1 = 0\n  3164: ra = 60, jump @0\n      : @72 [@dyn 30] (gas: 6)\n  3169: i32 a1 = a0 + 0\n  3171: a0 = 0x1\n  3174: a2 = 0\n  3176: ra = 0x3e\n  3179: ecalli 4 // 'seal_return'\n  3181: fallthrough\n      : @73 [@dyn 31] (gas: 9)\n  3182: a2 = u64 [a1 + 0x18]\n  3185: a3 = u64 [a1 + 0x10]\n  3188: a4 = u64 [a1 + 0x8]\n  3191: a1 = u64 [a1]\n  3193: u64 [a0 + 0x18] = a2\n  3196: u64 [a0 + 0x10] = a3\n  3199: u64 [a0 + 0x8] = a4\n  3202: u64 [a0] = a1\n  3204: ret\n      : @74 (gas: 19)\n  3206: s1 = u64 [sp + 0xa0]\n  3210: a0 = u64 [sp + 0xb8]\n  3214: a1 = u64 [sp + 0xa8]\n  3218: a2 = u64 [sp + 0xb0]\n  3222: s1 = s1 + 0x1\n  3225: a3 = s1 <u 0x1\n  3228: a3 = a3 + a1\n  3231: a1 = s1 | a3\n  3234: a1 = a1 <u 0x1\n  3237: a4 = a2 + a1\n  3240: a1 = a4 <u a2\n  3243: a0 = a0 + a1\n  3246: u64 [sp + 0x18] = a3\n  3249: u64 [sp + 0x8] = a0\n  3252: a0 = a0 | a3\n  3255: u64 [sp + 0x10] = a4\n  3258: a1 = s1 | a4\n  3261: a0 = a0 | a1\n  3264: jump @76 if a0 == 0\n      : @75 (gas: 38)\n  3268: u64 [sp + 152] = 0\n  3272: u64 [sp + 144] = 0\n  3276: u64 [sp + 136] = 0\n  3280: u64 [sp + 128] = 0\n  3284: u64 [sp + 184] = 0\n  3288: u64 [sp + 176] = 0\n  3292: u64 [sp + 168] = 0\n  3296: u64 [sp + 160] = 0\n  3300: u32 [sp + 96] = 0x20\n  3304: i32 a1 = sp + 0x80\n  3308: i32 a3 = sp + 0xa0\n  3312: i32 a4 = sp + 0x60\n  3315: a2 = 0xffffffffffffffff\n  3318: a0 = 0\n  3320: ecalli 3 // 'get_storage'\n  3322: u64 [sp + 152] = 0\n  3326: u64 [sp + 144] = 0\n  3330: u64 [sp + 136] = 0\n  3334: u64 [sp + 128] = 0\n  3338: a0 = u64 [sp + 0x8]\n  3341: u64 [sp + 0xb8] = a0\n  3345: a0 = u64 [sp + 0x10]\n  3348: u64 [sp + 0xb0] = a0\n  3352: a0 = u64 [sp + 0x18]\n  3355: u64 [sp + 0xa8] = a0\n  3359: u64 [sp + 0xa0] = s1\n  3363: i32 a1 = sp + 0x80\n  3367: i32 a3 = sp + 0xa0\n  3371: a2 = 0xffffffffffffffff\n  3374: a4 = 0x20\n  3377: a0 = 0\n  3379: ecalli 6 // 'set_storage'\n  3381: sp = s0 + 0xffffffffffffff20\n  3385: ra = u64 [sp + 0xd8]\n  3389: s0 = u64 [sp + 0xd0]\n  3393: s1 = u64 [sp + 0xc8]\n  3397: sp = sp + 0xe0\n  3401: ret\n      : @76 (gas: 8)\n  3403: u64 [sp + 80] = 0\n  3406: u64 [sp + 72] = 0\n  3409: u64 [sp + 64] = 0\n  3412: a0 = 0x4e487b7100000000\n  3422: a1 = sp + 0x40\n  3425: u64 [sp + 0x58] = a0\n  3428: a0 = 0\n  3430: ra = 64, jump @8\n      : @77 [@dyn 32] (gas: 7)\n  3435: u64 [sp + 56] = 0\n  3438: u64 [sp + 48] = 0\n  3441: u64 [sp + 32] = 0x11\n  3445: a0 = 0x4\n  3448: a1 = sp + 0x20\n  3451: u64 [sp + 40] = 0\n  3454: ra = 66, jump @8\n      : @78 [@dyn 33] (gas: 3)\n  3459: a1 = 0x24\n  3462: a0 = 0\n  3464: ra = 68, jump @0\n      : @79 [@dyn 34] (gas: 7)\n  3469: i32 a1 = a0 + 0\n  3471: a0 = 0x1\n  3474: a2 = 0x24\n  3477: ecalli 4 // 'seal_return'\n  3479: a0 = 0\n  3481: ra = 0x46\n  3484: jump @10\n      : @80 [export #0: 'call'] (gas: 2)\n  3487: a0 = 0\n  3489: ra = 70, jump @10\n      : @81 [@dyn 35] [export #1: 'deploy'] (gas: 2)\n  3494: a0 = 0x1\n  3497: ra = 72, jump @10\n      : @82 [@dyn 36] (gas: 9)\n  3502: sp = sp + 0xffffffffffffffc0\n  3505: u64 [sp + 0x38] = ra\n  3508: u64 [sp + 0x30] = s0\n  3511: u64 [sp + 0x28] = s1\n  3514: s0 = sp + 0x40\n  3517: sp = sp & 0xfffffffffffffff0\n  3520: s1 = a0\n  3522: a0 = sp\n  3524: ra = 74, jump @38\n      : @83 [@dyn 37] (gas: 14)\n  3529: a0 = u64 [sp + 0x10]\n  3532: a1 = u64 [sp + 0x18]\n  3535: a2 = u64 [sp]\n  3537: a3 = u64 [sp + 0x8]\n  3540: u64 [s1 + 0x10] = a0\n  3543: u64 [s1 + 0x18] = a1\n  3546: u64 [s1] = a2\n  3548: u64 [s1 + 0x8] = a3\n  3551: sp = s0 + 0xffffffffffffffc0\n  3554: ra = u64 [sp + 0x38]\n  3557: s0 = u64 [sp + 0x30]\n  3560: s1 = u64 [sp + 0x28]\n  3563: sp = sp + 0x40\n  3566: ret\n",
+						"bytecode": {
+							"object": "50564d0000bb10000000000000010700c11000c0004004808f08000000000e0000001c0000002a0000003500000040000000520000005d00000063616c6c5f646174615f636f707963616c6c5f646174615f6c6f616463616c6c5f646174615f73697a656765745f73746f726167657365616c5f72657475726e7365745f696d6d757461626c655f646174617365745f73746f7261676576616c75655f7472616e736665727265640511028d9f0463616c6c8da6066465706c6f79068ffc25028df065004d0152016f010302340349036c037803920349044e047c04810496042d065e077407440851080a093b0a530a5f0af30afe0a2f0c470c530c610c6e0c6b0d830d8d0da60dae0dc90d8b791052093b3309010001ae9833c8780883881f8488e0553801000128390a000002ae8a123d080000023308100002c8870732003308100002c88707320000009511d87b10207b15187b161082897b19088289087b1982851082861883773308205010029f6f686f59821a6faa821b086fbb787b18787a10787908787898bc38787c1f98bc30787c1e98bc28787c1d98bc20787c1c98bc18787c1b98bc10787c1a98bb08787b1998ab38787b1798ab30787b1698ab28787b1598ab20787b1498ab18787b1398ab10787b1298aa08787a11989a38787a0f989a30787a0e989a28787a0d989a20787a0c989a18787a0b989a10787a0a98990878790998893878790798893078790698892878790598892078790498891878790398891078790298880878780182102082151882161095112832009511f07b10087b158475010a02013d07040002510507501004095010062b029511c07b10387b15307b16289515408411e033074033082050100896fe46171f800046171e46171d46171c46171b46171a46171946171846171746171646171546171446171346171246171146171046170f46170e46170d46170c46170b46170a4617094617084617074617064617054617044617034617024617014607491118490149110849111083170a0701821710821818821908821ad49808d4a707d487075207370133074033082050100a02fe7c78117c79107c7a127c7b13978808d4980897aa1097bb18d4ba0ad4a8087c79157c7a147c7b167c7c17979908d4a90997bb1097cc18d4cb0bd4b909979920d489027c79017c7a7c7b027c7c03979908d4a90997bb1097cc18d4cb0bd4b9097c7a057c7b047c7c067c760797aa08d4ba0a97cc10976618d46c0cd4ca0a97aa20d4a9097c7a197c7b187c7c1a7c761b97aa08d4ba0a97cc10976618d46c0cd4ca0a7c7b1d7c7c1c7c761e7c781f97bb08d4cb0b976610978818d46808d4b808978820d48a0a7c78097c7b087c7c0a7c760b978808d4b80897cc10976618d46c0cd4c8087c7b0d7c7c0c7c760e7c770f97bb08d4cb0b976610977718d46707d4b707977720d487076f776fa66f986f29d49808d47609d48909989920d48707977720d49707510717003307330850100cd1fc837833070133090a040183666467330850100ebcfc8377330833090a01390808000251080d330710000383770a05016467330850101099fc8378330733093300120a04019511c07b10387b15309515408411e033074033082050101473fc46171f800046171e46171d46171c46171b46171a46171946171846171746171646171546171446171346171246171146171046170f46170e46170d46170c46170b46170a4617094617084617074617034617024617014607390804000246170646170546170453180451831733080a010181171c51478ae09dd076514745f2a43f4152477710245535330016951140ff7b10b8007b15b0007b16a8009515c0008411e04911384911304911284911208317200a07280d045010180a0833001a951160ff7b1098007b1590007b1688009515a0008411e04911384911304911284911208317200a0728410150101ce3059511f07b10087b15647533074033082050101e6ffb7c78017c797c7a027c7b03978808d4980897aa1097bb18d4ba0ad4a8087c79057c7a047c7b067c7c07979908d4a90997bb1097cc18d4cb0bd4b909979920d489027c79097c7a087c7b0a7c7c0b979908d4a90997bb1097cc18d4cb0bd4b9097c7a0d7c7b0c7c7c0e7c780f97aa08d4ba0a97cc10978818d4c808d4a808978820d498037c78117c7a107c7b127c7c13978808d4a80897bb1097cc18d4cb0bd4b8087c7a157c7b147c7c167c791797aa08d4ba0a97cc10979918d4c909d4a909979920d4890a7c78197c79187c7b1a7c7c1b978808d4980897bb1097cc18d4cb0bd4b8087c791d7c7b1c7c7c1e7c771f979908d4b90997cc10977718d4c707d49707977720d487076f776fa86f396f2a7b5a187b59107b58087b5782100882159511103200821730821838821928821a20d49808d4a707d487075207860139070400025417037d014911584911504911484911404911784911704911684911604821800020831840831a60831b80003309ff33070a038217787b178217707b17088217687b17108217607b1718330740330820501020d8f97c78117c79107c7a127c7b13978808d4980897aa1097bb18d4ba0ad4a8087c79157c7a147c7b167c7c17979908d4a90997bb1097cc18d4cb0bd4b909979920d489027c79017c7a7c7b027c7c03979908d4a90997bb1097cc18d4cb0bd4b9097c7a057c7b047c7c067c760797aa08d4ba0a97cc10976618d46c0cd4ca0a97aa20d4a9097c7a197c7b187c7c1a7c761b97aa08d4ba0a97cc10976618d46c0cd4ca0a7c7b1d7c7c1c7c761e7c781f97bb08d4cb0b976610978818d46808d4b808978820d48a0a7c78097c7b087c7c0a7c760b978808d4b80897cc10976618d46c0cd4c8087c7b0d7c7c0c7c760e7c770f97bb08d4cb0b976610977718d46707d4b707977720d487076f786fa76f996f2ad4a909d4870ad49a0a98aa20d49808978820d4a8085108170033073308501022a7f8837833070133090a04018376330820646750102491f882186f888219086f99821a106faa821b186fbb98bc38787c1f98bc30787c1e98bc28787c1d98bc20787c1c98bc18787c1b98bc10787c1a98bc08787c19787b18787a1098ab38787b1798ab30787b1698ab28787b1598ab20787b1498ab18787b1398ab10787b1298aa08787a11787908989a38787a0f989a30787a0e989a28787a0d989a20787a0c989a18787a0b989a10787a0a98990878790978789889387879079889307879069889287879059889207879049889187879039889107879029888087878013308206467501026c1f7837833092033073300280a04013200821730821838821928821a20d49808d4a707d487075207ca013907040002541723c101831780003308040a01821780007b1718821788007b1710821790007b1708821698004911784911704911684911604921980049219000492188004921800048114020831860831a8000831b403309ff33070a034911784911704911684911607b1698008217087b1790008217107b1788008217187b178000831860831a80003309ff330b2033070a0633074033082050102afbf67c78117c79107c7a127c7b13978808d4980897aa1097bb18d4ba0ad4a8087c79157c7a147c7b167c7c17979908d4a90997bb1097cc18d4cb0bd4b909979920d489027c79017c7a7c7b027c7c03979908d4a90997bb1097cc18d4cb0bd4b9097c7a057c7b047c7c067c760797aa08d4ba0a97cc10976618d46c0cd4ca0a97aa20d4a9097c7a197c7b187c7c1a7c761b97aa08d4ba0a97cc10976618d46c0cd4ca0a7c7b1d7c7c1c7c761e7c781f97bb08d4cb0b976610978818d46808d4b808978820d48a0a7c78097c7b087c7c0a7c760b978808d4b80897cc10976618d46c0cd4c8087c7b0d7c7c0c7c760e7c770f97bb08d4cb0b976610977718d46707d4b707977720d487076f786fa76f996f2ad4a909d4870ad49a0a98aa20d49808978820d4a80851081e003307330850102ccaf5837833070133090a04837733002e28b7f5837750102eb2f58378330733093300300a04019511c07b10387b15309515408411e0491118491110491108490183170a0701821710821818821908821ad49808d4a707d487075207940139070400025417038b01330032951120ff7b10d8007b15d0007b16c8009515e0008411e0492198004921900049218800492180004921b8004921b0004921a8004921a0004811602083188000831aa000831b603309ff33070a0328960133074033082050103407f57c78117c79107c7a127c7b13978808d4980897aa1097bb18d4ba0ad4a8087c79157c7a147c7b167c7c17979908d4a90997bb1097cc18d4cb0bd4b909979920d489027c79017c7a7c7b027c7c03979908d4a90997bb1097cc18d4cb0bd4b9097c7a057c7b047c7c067c780797aa08d4ba0a97cc10978818d4c808d4a808978820d498037c78197c7a187c7b1a7c7c1b978808d4a80897bb1097cc18d4cb0bd4b8087c7a1d7c7b1c7c7c1e7c791f97aa08d4ba0a97cc10979918d4c909d4a909979920d4890a7c78097c79087c7b0a7c7c0b978808d4980897bb1097cc18d4cb0bd4b8087c790d7c7b0c7c7c0e7c770f979908d4b90997cc10977718d4c707d49707977720d487076f786fa76f396f2ad4a909d4870ad49a0a98aa20d49808978820d4a80851081e0033073308501036d6f3837833070133090a04837733003828c3f38377501038bef383783307330933003a0a04019511f87b103307330850103ca4f38378330701330933003e0a0401828918828a10828b0882887b79187b7a107b7b087b7832008216a0008217b8008218a8008219b000956601886a01c88a0ad4a608888801c8890bd89b08c887077b1a187b1708d4a7077b1b10d4b608d4870751078b00492198004921900049218800492180004921b8004921b0004921a8004921a0004811602083188000831aa000831b603309ff33070a03492198004921900049218800492180008217087b17b8008217107b17b0008217187b17a8007b16a00083188000831aa0003309ff330b2033070a06955120ff8210d8008215d0008216c8009511e0003200491150491148491140140700000000717b484e9518407b17583307501040daf249113849113049112011330704951820491128501042c2f2330824330750104478f283783307013309240a0433073300462897f3330750104692f33307015010488af39511c07b10387b15307b16289515408411f06476641750104abdf68217108218188219821a087b67107b68187b697b6a089551c0821038821530821628951140320049489220248414d249525252a22a2529499224499224499224499224499224499224499224494a4a43222449928490244992244992244992244929a9494a124948922449922449922425499224499224499224499224499224499224499224499254254992ac506a15aa4342ad50a549922484244992244992244992248524514d201048444424495242222222499212924a424a92244992244992244992244992244992244992244992244992244992244992a42a4929254992082149922424914a49922421499224499224499294244992244992244992244992244992244992244992244952952449b242a9a55029a524499224499224499224499224499224494992244992a4504a4b92241142a44824124912111189a4922412894422a924244992244992244992922449922449922449922449922449922449922449922449aa92244956285552a8d22449926a929244088988884444444444445249429224499224499224294992244992244992244992244992244992244992244992a42a499264855225852a4d154a699292544444922449922411111111111149454424128988482a22224a12405248224948a1a4924242922415929294244900"
+						},
+						"deployedBytecode": {
+							"object": "50564d0000bb10000000000000010700c11000c0004004808f08000000000e0000001c0000002a0000003500000040000000520000005d00000063616c6c5f646174615f636f707963616c6c5f646174615f6c6f616463616c6c5f646174615f73697a656765745f73746f726167657365616c5f72657475726e7365745f696d6d757461626c655f646174617365745f73746f7261676576616c75655f7472616e736665727265640511028d9f0463616c6c8da6066465706c6f79068ffc25028df065004d0152016f010302340349036c037803920349044e047c04810496042d065e077407440851080a093b0a530a5f0af30afe0a2f0c470c530c610c6e0c6b0d830d8d0da60dae0dc90d8b791052093b3309010001ae9833c8780883881f8488e0553801000128390a000002ae8a123d080000023308100002c8870732003308100002c88707320000009511d87b10207b15187b161082897b19088289087b1982851082861883773308205010029f6f686f59821a6faa821b086fbb787b18787a10787908787898bc38787c1f98bc30787c1e98bc28787c1d98bc20787c1c98bc18787c1b98bc10787c1a98bb08787b1998ab38787b1798ab30787b1698ab28787b1598ab20787b1498ab18787b1398ab10787b1298aa08787a11989a38787a0f989a30787a0e989a28787a0d989a20787a0c989a18787a0b989a10787a0a98990878790998893878790798893078790698892878790598892078790498891878790398891078790298880878780182102082151882161095112832009511f07b10087b158475010a02013d07040002510507501004095010062b029511c07b10387b15307b16289515408411e033074033082050100896fe46171f800046171e46171d46171c46171b46171a46171946171846171746171646171546171446171346171246171146171046170f46170e46170d46170c46170b46170a4617094617084617074617064617054617044617034617024617014607491118490149110849111083170a0701821710821818821908821ad49808d4a707d487075207370133074033082050100a02fe7c78117c79107c7a127c7b13978808d4980897aa1097bb18d4ba0ad4a8087c79157c7a147c7b167c7c17979908d4a90997bb1097cc18d4cb0bd4b909979920d489027c79017c7a7c7b027c7c03979908d4a90997bb1097cc18d4cb0bd4b9097c7a057c7b047c7c067c760797aa08d4ba0a97cc10976618d46c0cd4ca0a97aa20d4a9097c7a197c7b187c7c1a7c761b97aa08d4ba0a97cc10976618d46c0cd4ca0a7c7b1d7c7c1c7c761e7c781f97bb08d4cb0b976610978818d46808d4b808978820d48a0a7c78097c7b087c7c0a7c760b978808d4b80897cc10976618d46c0cd4c8087c7b0d7c7c0c7c760e7c770f97bb08d4cb0b976610977718d46707d4b707977720d487076f776fa66f986f29d49808d47609d48909989920d48707977720d49707510717003307330850100cd1fc837833070133090a040183666467330850100ebcfc8377330833090a01390808000251080d330710000383770a05016467330850101099fc8378330733093300120a04019511c07b10387b15309515408411e033074033082050101473fc46171f800046171e46171d46171c46171b46171a46171946171846171746171646171546171446171346171246171146171046170f46170e46170d46170c46170b46170a4617094617084617074617034617024617014607390804000246170646170546170453180451831733080a010181171c51478ae09dd076514745f2a43f4152477710245535330016951140ff7b10b8007b15b0007b16a8009515c0008411e04911384911304911284911208317200a07280d045010180a0833001a951160ff7b1098007b1590007b1688009515a0008411e04911384911304911284911208317200a0728410150101ce3059511f07b10087b15647533074033082050101e6ffb7c78017c797c7a027c7b03978808d4980897aa1097bb18d4ba0ad4a8087c79057c7a047c7b067c7c07979908d4a90997bb1097cc18d4cb0bd4b909979920d489027c79097c7a087c7b0a7c7c0b979908d4a90997bb1097cc18d4cb0bd4b9097c7a0d7c7b0c7c7c0e7c780f97aa08d4ba0a97cc10978818d4c808d4a808978820d498037c78117c7a107c7b127c7c13978808d4a80897bb1097cc18d4cb0bd4b8087c7a157c7b147c7c167c791797aa08d4ba0a97cc10979918d4c909d4a909979920d4890a7c78197c79187c7b1a7c7c1b978808d4980897bb1097cc18d4cb0bd4b8087c791d7c7b1c7c7c1e7c771f979908d4b90997cc10977718d4c707d49707977720d487076f776fa86f396f2a7b5a187b59107b58087b5782100882159511103200821730821838821928821a20d49808d4a707d487075207860139070400025417037d014911584911504911484911404911784911704911684911604821800020831840831a60831b80003309ff33070a038217787b178217707b17088217687b17108217607b1718330740330820501020d8f97c78117c79107c7a127c7b13978808d4980897aa1097bb18d4ba0ad4a8087c79157c7a147c7b167c7c17979908d4a90997bb1097cc18d4cb0bd4b909979920d489027c79017c7a7c7b027c7c03979908d4a90997bb1097cc18d4cb0bd4b9097c7a057c7b047c7c067c760797aa08d4ba0a97cc10976618d46c0cd4ca0a97aa20d4a9097c7a197c7b187c7c1a7c761b97aa08d4ba0a97cc10976618d46c0cd4ca0a7c7b1d7c7c1c7c761e7c781f97bb08d4cb0b976610978818d46808d4b808978820d48a0a7c78097c7b087c7c0a7c760b978808d4b80897cc10976618d46c0cd4c8087c7b0d7c7c0c7c760e7c770f97bb08d4cb0b976610977718d46707d4b707977720d487076f786fa76f996f2ad4a909d4870ad49a0a98aa20d49808978820d4a8085108170033073308501022a7f8837833070133090a04018376330820646750102491f882186f888219086f99821a106faa821b186fbb98bc38787c1f98bc30787c1e98bc28787c1d98bc20787c1c98bc18787c1b98bc10787c1a98bc08787c19787b18787a1098ab38787b1798ab30787b1698ab28787b1598ab20787b1498ab18787b1398ab10787b1298aa08787a11787908989a38787a0f989a30787a0e989a28787a0d989a20787a0c989a18787a0b989a10787a0a98990878790978789889387879079889307879069889287879059889207879049889187879039889107879029888087878013308206467501026c1f7837833092033073300280a04013200821730821838821928821a20d49808d4a707d487075207ca013907040002541723c101831780003308040a01821780007b1718821788007b1710821790007b1708821698004911784911704911684911604921980049219000492188004921800048114020831860831a8000831b403309ff33070a034911784911704911684911607b1698008217087b1790008217107b1788008217187b178000831860831a80003309ff330b2033070a0633074033082050102afbf67c78117c79107c7a127c7b13978808d4980897aa1097bb18d4ba0ad4a8087c79157c7a147c7b167c7c17979908d4a90997bb1097cc18d4cb0bd4b909979920d489027c79017c7a7c7b027c7c03979908d4a90997bb1097cc18d4cb0bd4b9097c7a057c7b047c7c067c760797aa08d4ba0a97cc10976618d46c0cd4ca0a97aa20d4a9097c7a197c7b187c7c1a7c761b97aa08d4ba0a97cc10976618d46c0cd4ca0a7c7b1d7c7c1c7c761e7c781f97bb08d4cb0b976610978818d46808d4b808978820d48a0a7c78097c7b087c7c0a7c760b978808d4b80897cc10976618d46c0cd4c8087c7b0d7c7c0c7c760e7c770f97bb08d4cb0b976610977718d46707d4b707977720d487076f786fa76f996f2ad4a909d4870ad49a0a98aa20d49808978820d4a80851081e003307330850102ccaf5837833070133090a04837733002e28b7f5837750102eb2f58378330733093300300a04019511c07b10387b15309515408411e0491118491110491108490183170a0701821710821818821908821ad49808d4a707d487075207940139070400025417038b01330032951120ff7b10d8007b15d0007b16c8009515e0008411e0492198004921900049218800492180004921b8004921b0004921a8004921a0004811602083188000831aa000831b603309ff33070a0328960133074033082050103407f57c78117c79107c7a127c7b13978808d4980897aa1097bb18d4ba0ad4a8087c79157c7a147c7b167c7c17979908d4a90997bb1097cc18d4cb0bd4b909979920d489027c79017c7a7c7b027c7c03979908d4a90997bb1097cc18d4cb0bd4b9097c7a057c7b047c7c067c780797aa08d4ba0a97cc10978818d4c808d4a808978820d498037c78197c7a187c7b1a7c7c1b978808d4a80897bb1097cc18d4cb0bd4b8087c7a1d7c7b1c7c7c1e7c791f97aa08d4ba0a97cc10979918d4c909d4a909979920d4890a7c78097c79087c7b0a7c7c0b978808d4980897bb1097cc18d4cb0bd4b8087c790d7c7b0c7c7c0e7c770f979908d4b90997cc10977718d4c707d49707977720d487076f786fa76f396f2ad4a909d4870ad49a0a98aa20d49808978820d4a80851081e0033073308501036d6f3837833070133090a04837733003828c3f38377501038bef383783307330933003a0a04019511f87b103307330850103ca4f38378330701330933003e0a0401828918828a10828b0882887b79187b7a107b7b087b7832008216a0008217b8008218a8008219b000956601886a01c88a0ad4a608888801c8890bd89b08c887077b1a187b1708d4a7077b1b10d4b608d4870751078b00492198004921900049218800492180004921b8004921b0004921a8004921a0004811602083188000831aa000831b603309ff33070a03492198004921900049218800492180008217087b17b8008217107b17b0008217187b17a8007b16a00083188000831aa0003309ff330b2033070a06955120ff8210d8008215d0008216c8009511e0003200491150491148491140140700000000717b484e9518407b17583307501040daf249113849113049112011330704951820491128501042c2f2330824330750104478f283783307013309240a0433073300462897f3330750104692f33307015010488af39511c07b10387b15307b16289515408411f06476641750104abdf68217108218188219821a087b67107b68187b697b6a089551c0821038821530821628951140320049489220248414d249525252a22a2529499224499224499224499224499224499224499224494a4a43222449928490244992244992244992244929a9494a124948922449922449922425499224499224499224499224499224499224499224499254254992ac506a15aa4342ad50a549922484244992244992244992248524514d201048444424495242222222499212924a424a92244992244992244992244992244992244992244992244992244992244992a42a4929254992082149922424914a49922421499224499224499294244992244992244992244992244992244992244992244952952449b242a9a55029a524499224499224499224499224499224494992244992a4504a4b92241142a44824124912111189a4922412894422a924244992244992244992922449922449922449922449922449922449922449922449aa92244956285552a8d22449926a929244088988884444444444445249429224499224499224294992244992244992244992244992244992244992244992a42a499264855225852a4d154a699292544444922449922411111111111149454424128988482a22224a12405248224948a1a4924242922415929294244900"
+						},
+						"methodIdentifiers": {
+							"increment()": "d09de08a",
+							"setValue(uint256)": "55241077",
+							"value()": "3fa4f245"
+						}
+					},
+					"irOptimized": "/// @use-src 0:\"homework3/LogicContract.sol\"\nobject \"LogicContract_22\" {\n    code {\n        {\n            /// @src 0:60:271  \"contract LogicContract {...\"\n            mstore(64, memoryguard(0x80))\n            if callvalue()\n            {\n                revert_error_ca66f745a3ce8ff40e2ccaf1ad45db7774001b90d25810abd9040049be7bf4bb()\n            }\n            let _1 := allocate_unbounded()\n            codecopy(_1, dataoffset(\"LogicContract_22_deployed\"), datasize(\"LogicContract_22_deployed\"))\n            return(_1, datasize(\"LogicContract_22_deployed\"))\n        }\n        function allocate_unbounded() -> memPtr\n        { memPtr := mload(64) }\n        function revert_error_ca66f745a3ce8ff40e2ccaf1ad45db7774001b90d25810abd9040049be7bf4bb()\n        { revert(0, 0) }\n    }\n    /// @use-src 0:\"homework3/LogicContract.sol\"\n    object \"LogicContract_22_deployed\" {\n        code {\n            {\n                /// @src 0:60:271  \"contract LogicContract {...\"\n                mstore(64, memoryguard(0x80))\n                if iszero(lt(calldatasize(), 4))\n                {\n                    let selector := shift_right_unsigned(calldataload(0))\n                    switch selector\n                    case 0x3fa4f245 { external_fun_value() }\n                    case 0x55241077 { external_fun_setValue() }\n                    case 0xd09de08a { external_fun_increment() }\n                    default { }\n                }\n                revert_error_42b3090547df1d2001c96683413b8cf91c1b902ef5e3cb8d9f6f304cf7446f74()\n            }\n            function shift_right_unsigned(value) -> newValue\n            { newValue := shr(224, value) }\n            function allocate_unbounded() -> memPtr\n            { memPtr := mload(64) }\n            function revert_error_ca66f745a3ce8ff40e2ccaf1ad45db7774001b90d25810abd9040049be7bf4bb()\n            { revert(0, 0) }\n            function revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b()\n            { revert(0, 0) }\n            function abi_decode(headStart, dataEnd)\n            {\n                if slt(sub(dataEnd, headStart), 0)\n                {\n                    revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b()\n                }\n            }\n            function shift_right_unsigned_dynamic(bits, value) -> newValue\n            { newValue := shr(bits, value) }\n            function cleanup_from_storage_uint256(value) -> cleaned\n            { cleaned := value }\n            function extract_from_storage_value_dynamict_uint256(slot_value, offset) -> value\n            {\n                value := cleanup_from_storage_uint256(shift_right_unsigned_dynamic(mul(offset, 8), slot_value))\n            }\n            function read_from_storage_split_dynamic_uint256(slot, offset) -> value\n            {\n                value := extract_from_storage_value_dynamict_uint256(sload(slot), offset)\n            }\n            /// @ast-id 3 @src 0:92:109  \"uint public value\"\n            function getter_fun_value() -> ret\n            {\n                let slot := 0\n                let offset := 0\n                ret := read_from_storage_split_dynamic_uint256(slot, offset)\n            }\n            /// @src 0:60:271  \"contract LogicContract {...\"\n            function cleanup_uint256(value) -> cleaned\n            { cleaned := value }\n            function abi_encode_uint256_to_uint256(value, pos)\n            {\n                mstore(pos, cleanup_uint256(value))\n            }\n            function abi_encode_uint256(headStart, value0) -> tail\n            {\n                tail := add(headStart, 32)\n                abi_encode_uint256_to_uint256(value0, add(headStart, 0))\n            }\n            function external_fun_value()\n            {\n                if callvalue()\n                {\n                    revert_error_ca66f745a3ce8ff40e2ccaf1ad45db7774001b90d25810abd9040049be7bf4bb()\n                }\n                abi_decode(4, calldatasize())\n                let ret := getter_fun_value()\n                let memPos := allocate_unbounded()\n                let memEnd := abi_encode_uint256(memPos, ret)\n                return(memPos, sub(memEnd, memPos))\n            }\n            function validator_revert_uint256(value)\n            {\n                if iszero(eq(value, cleanup_uint256(value))) { revert(0, 0) }\n            }\n            function abi_decode_uint256(offset, end) -> value\n            {\n                value := calldataload(offset)\n                validator_revert_uint256(value)\n            }\n            function abi_decode_tuple_uint256(headStart, dataEnd) -> value0\n            {\n                if slt(sub(dataEnd, headStart), 32)\n                {\n                    revert_error_dbdddcbe895c83990c08b3492a0e83918d802a52331272ac6fdb6a7c4aea3b1b()\n                }\n                let offset := 0\n                value0 := abi_decode_uint256(add(headStart, offset), dataEnd)\n            }\n            function abi_encode_tuple(headStart) -> tail\n            { tail := add(headStart, 0) }\n            function external_fun_setValue()\n            {\n                if callvalue()\n                {\n                    revert_error_ca66f745a3ce8ff40e2ccaf1ad45db7774001b90d25810abd9040049be7bf4bb()\n                }\n                let param := abi_decode_tuple_uint256(4, calldatasize())\n                fun_setValue(param)\n                let memPos := allocate_unbounded()\n                let memEnd := abi_encode_tuple(memPos)\n                return(memPos, sub(memEnd, memPos))\n            }\n            function external_fun_increment()\n            {\n                if callvalue()\n                {\n                    revert_error_ca66f745a3ce8ff40e2ccaf1ad45db7774001b90d25810abd9040049be7bf4bb()\n                }\n                abi_decode(4, calldatasize())\n                fun_increment()\n                let memPos := allocate_unbounded()\n                let memEnd := abi_encode_tuple(memPos)\n                return(memPos, sub(memEnd, memPos))\n            }\n            function revert_error_42b3090547df1d2001c96683413b8cf91c1b902ef5e3cb8d9f6f304cf7446f74()\n            { revert(0, 0) }\n            function shift_left(value) -> newValue\n            { newValue := shl(0, value) }\n            function update_byte_slice_shift(value, toInsert) -> result\n            {\n                let mask := not(0)\n                toInsert := shift_left(toInsert)\n                value := and(value, not(mask))\n                result := or(value, and(toInsert, mask))\n            }\n            function identity(value) -> ret\n            { ret := value }\n            function convert_uint256_to_uint256(value) -> converted\n            {\n                converted := cleanup_uint256(identity(cleanup_uint256(value)))\n            }\n            function prepare_store_uint256(value) -> ret\n            { ret := value }\n            function update_storage_value_offset_uint256_to_uint256(slot, value)\n            {\n                let convertedValue := convert_uint256_to_uint256(value)\n                sstore(slot, update_byte_slice_shift(sload(slot), prepare_store_uint256(convertedValue)))\n            }\n            /// @ast-id 21 @src 0:191:268  \"function setValue(uint _newValue) public {...\"\n            function fun_setValue(var_newValue)\n            {\n                /// @src 0:251:260  \"_newValue\"\n                let _1 := var_newValue\n                let expr := _1\n                /// @src 0:243:260  \"value = _newValue\"\n                update_storage_value_offset_uint256_to_uint256(0x00, expr)\n            }\n            /// @src 0:60:271  \"contract LogicContract {...\"\n            function cleanup_rational_by(value) -> cleaned\n            { cleaned := value }\n            function convert_rational_by_to_uint256(value) -> converted\n            {\n                converted := cleanup_uint256(identity(cleanup_rational_by(value)))\n            }\n            function shift_right_0_unsigned(value) -> newValue\n            { newValue := shr(0, value) }\n            function extract_from_storage_value_offset_uint256(slot_value) -> value\n            {\n                value := cleanup_from_storage_uint256(shift_right_0_unsigned(slot_value))\n            }\n            function read_from_storage_split_offset_uint256(slot) -> value\n            {\n                value := extract_from_storage_value_offset_uint256(sload(slot))\n            }\n            function panic_error_0x11()\n            {\n                mstore(0, shl(224, 0x4e487b71))\n                mstore(4, 0x11)\n                revert(0, 0x24)\n            }\n            function checked_add_uint256(x, y) -> sum\n            {\n                x := cleanup_uint256(x)\n                y := cleanup_uint256(y)\n                sum := add(x, y)\n                if gt(x, sum) { panic_error_0x11() }\n            }\n            /// @ast-id 11 @src 0:122:179  \"function increment() public {...\"\n            function fun_increment()\n            {\n                /// @src 0:170:171  \"1\"\n                let expr := 0x01\n                /// @src 0:161:171  \"value += 1\"\n                let _1 := convert_rational_by_to_uint256(expr)\n                let _2 := read_from_storage_split_offset_uint256(0x00)\n                let expr_1 := checked_add_uint256(_2, _1)\n                update_storage_value_offset_uint256_to_uint256(0x00, expr_1)\n            }\n        }\n        data \".metadata\" hex\"a26469706673582212202928bc57a1c61708c273186f514044a4d8d91ef32cc80fdb401b0993a76bd83164736f6c634300081c0033\"\n    }\n}\n",
+					"hash": "a1091a9d0b3721a79ccfdba43a6d0e496ce447d68077c70816a572605004225a",
+					"factoryDependencies": {}
+				}
+			}
+		},
+		"sources": {
+			"homework3/LogicContract.sol": {
+				"id": 0,
+				"ast": {
+					"absolutePath": "homework3/LogicContract.sol",
+					"exportedSymbols": {
+						"LogicContract": [
+							22
+						]
+					},
+					"id": 23,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "33:23:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"canonicalName": "LogicContract",
+							"contractDependencies": [],
+							"contractKind": "contract",
+							"fullyImplemented": true,
+							"id": 22,
+							"linearizedBaseContracts": [
+								22
+							],
+							"name": "LogicContract",
+							"nameLocation": "69:13:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"constant": false,
+									"functionSelector": "3fa4f245",
+									"id": 3,
+									"mutability": "mutable",
+									"name": "value",
+									"nameLocation": "104:5:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 22,
+									"src": "92:17:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_uint256",
+										"typeString": "uint256"
+									},
+									"typeName": {
+										"id": 2,
+										"name": "uint",
+										"nodeType": "ElementaryTypeName",
+										"src": "92:4:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_uint256",
+											"typeString": "uint256"
+										}
+									},
+									"visibility": "public"
+								},
+								{
+									"body": {
+										"id": 10,
+										"nodeType": "Block",
+										"src": "150:29:0",
+										"statements": [
+											{
+												"expression": {
+													"id": 8,
+													"isConstant": false,
+													"isLValue": false,
+													"isPure": false,
+													"lValueRequested": false,
+													"leftHandSide": {
+														"id": 6,
+														"name": "value",
+														"nodeType": "Identifier",
+														"overloadedDeclarations": [],
+														"referencedDeclaration": 3,
+														"src": "161:5:0",
+														"typeDescriptions": {
+															"typeIdentifier": "t_uint256",
+															"typeString": "uint256"
+														}
+													},
+													"nodeType": "Assignment",
+													"operator": "+=",
+													"rightHandSide": {
+														"hexValue": "31",
+														"id": 7,
+														"isConstant": false,
+														"isLValue": false,
+														"isPure": true,
+														"kind": "number",
+														"lValueRequested": false,
+														"nodeType": "Literal",
+														"src": "170:1:0",
+														"typeDescriptions": {
+															"typeIdentifier": "t_rational_1_by_1",
+															"typeString": "int_const 1"
+														},
+														"value": "1"
+													},
+													"src": "161:10:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"id": 9,
+												"nodeType": "ExpressionStatement",
+												"src": "161:10:0"
+											}
+										]
+									},
+									"functionSelector": "d09de08a",
+									"id": 11,
+									"implemented": true,
+									"kind": "function",
+									"modifiers": [],
+									"name": "increment",
+									"nameLocation": "131:9:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 4,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "140:2:0"
+									},
+									"returnParameters": {
+										"id": 5,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "150:0:0"
+									},
+									"scope": 22,
+									"src": "122:57:0",
+									"stateMutability": "nonpayable",
+									"virtual": false,
+									"visibility": "public"
+								},
+								{
+									"body": {
+										"id": 20,
+										"nodeType": "Block",
+										"src": "232:36:0",
+										"statements": [
+											{
+												"expression": {
+													"id": 18,
+													"isConstant": false,
+													"isLValue": false,
+													"isPure": false,
+													"lValueRequested": false,
+													"leftHandSide": {
+														"id": 16,
+														"name": "value",
+														"nodeType": "Identifier",
+														"overloadedDeclarations": [],
+														"referencedDeclaration": 3,
+														"src": "243:5:0",
+														"typeDescriptions": {
+															"typeIdentifier": "t_uint256",
+															"typeString": "uint256"
+														}
+													},
+													"nodeType": "Assignment",
+													"operator": "=",
+													"rightHandSide": {
+														"id": 17,
+														"name": "_newValue",
+														"nodeType": "Identifier",
+														"overloadedDeclarations": [],
+														"referencedDeclaration": 13,
+														"src": "251:9:0",
+														"typeDescriptions": {
+															"typeIdentifier": "t_uint256",
+															"typeString": "uint256"
+														}
+													},
+													"src": "243:17:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"id": 19,
+												"nodeType": "ExpressionStatement",
+												"src": "243:17:0"
+											}
+										]
+									},
+									"functionSelector": "55241077",
+									"id": 21,
+									"implemented": true,
+									"kind": "function",
+									"modifiers": [],
+									"name": "setValue",
+									"nameLocation": "200:8:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 14,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 13,
+												"mutability": "mutable",
+												"name": "_newValue",
+												"nameLocation": "214:9:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 21,
+												"src": "209:14:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												},
+												"typeName": {
+													"id": 12,
+													"name": "uint",
+													"nodeType": "ElementaryTypeName",
+													"src": "209:4:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "208:16:0"
+									},
+									"returnParameters": {
+										"id": 15,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "232:0:0"
+									},
+									"scope": 22,
+									"src": "191:77:0",
+									"stateMutability": "nonpayable",
+									"virtual": false,
+									"visibility": "public"
+								}
+							],
+							"scope": 23,
+							"src": "60:211:0",
+							"usedErrors": [],
+							"usedEvents": []
+						}
+					],
+					"src": "33:238:0"
+				}
+			}
+		},
+		"errors": [],
+		"version": "0.8.28",
+		"long_version": "0.8.28+commit.7893614a.Emscripten.clang",
+		"revive_version": "0.1.0-dev.12+commit.66f9a4d.llvm-18.1.8"
+	}
+}
