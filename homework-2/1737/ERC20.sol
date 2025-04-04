@@ -8,7 +8,7 @@ interface IERC20 {
     function allowance(address owner, address spender) external view returns (uint256);
     function approve(address spender, uint256 amount) external returns (bool);
     function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
-    event transfer(address indexed from, address indexed to, uint256 value);
+    event Transfer(address indexed from, address indexed to, uint256 value); // Changed from lowercase 'transfer' to 'Transfer'
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
 
@@ -25,7 +25,7 @@ contract MyToken is IERC20 {
 constructor(uint256 initialSupply) {
     _totalSupply = initialSupply * 10 ** uint256(decimals);
     _balances[msg.sender] = _totalSupply;
-    emit transfer(address(0), msg.sender, _totalSupply);
+    emit Transfer(address(0), msg.sender, _totalSupply); 
     }
 
 // check the total supply of the token
