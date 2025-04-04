@@ -1,0 +1,79 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "testDelegateCall",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"homework3/TestContract.sol": "TestContract"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"details": {
+				"constantOptimizer": false,
+				"cse": false,
+				"deduplicate": false,
+				"inliner": false,
+				"jumpdestRemover": false,
+				"orderLiterals": false,
+				"peephole": false,
+				"simpleCounterForLoopUncheckedIncrement": true,
+				"yul": false
+			},
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"homework3/LogicContract.sol": {
+			"keccak256": "0x1542228b5052b66b30fcfb7477ddc1db6427e24fd5e62dddc8b58249914fc962",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8aac6be642d4cf23c89a86d8bebbe3d5e23836f077529282348a3fed1757b90b",
+				"dweb:/ipfs/Qmdv3eMJS1RxMc2vCKUqTtNdRoy27QqaNcZhC24SohTmU4"
+			]
+		},
+		"homework3/ProxyContract.sol": {
+			"keccak256": "0x61cdf475e31f667907ce3535dab2639d39ba538eed70c0592ad2295b838c9e60",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://63237ff84a58612c96245fde478844e2053bec4c3630fc2ddf112c69ef2bb5dc",
+				"dweb:/ipfs/QmemoUiSBJuViSQhRRydmLDnwBv1BsiAYHfPuqrhVK7Av4"
+			]
+		},
+		"homework3/TestContract.sol": {
+			"keccak256": "0x90d58a262ad339e5b825c8a6149bfedf949062bf294037b68e4e01396e95381a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1d36cdc9d6095c240b312cef63f1bf7d33394d699b4583a79c872fa20f9b98db",
+				"dweb:/ipfs/QmUqaMRvy3GPxh1S8Pt81Vk8XGyvCUh5rBJ2ju4nTxwFeU"
+			]
+		}
+	},
+	"version": 1
+}
