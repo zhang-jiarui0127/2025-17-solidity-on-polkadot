@@ -28,18 +28,16 @@ contract ProxyTest is Test {
     }
 
     function testStorageSlotConsistency() public {
-        // 检查存储槽位是否一致
-        uint256 proxySlot0;
-        assembly {
-            proxySlot0 := sload(0)
-        }
-        assertEq(proxySlot0, 0, "Proxy slot 0 should be 0 initially");
-
-        // 调用后再次检查
+        assertEq(logic.count(), 0, "Logic count should start at 0");
+        logic.increment();
+        assertEq(logic.count(), 1, "Logic count should be 1");
+        assertEq(proxy.count(), 0, "Proxy count should start at 0");
         proxy.delegateCallIncrement(address(logic));
-        assembly {
-            proxySlot0 := sload(0)
-        }
-        assertEq(proxySlot0, 1, "Proxy slot 0 should be 1 after delegatecall");
+        assertEq(proxy.count(), 1, "Proxy count should be 1 after delegatecall");
+        proxy.delegateCallIncrement(address(logic));
+        assertEq(proxy.count(), 2, "Proxy count should be 2 after delegatecall");
+        
+
+
     }
 }
