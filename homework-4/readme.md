@@ -27,7 +27,7 @@ https://github.com/papermoonio/2025-h1-solidity-polkadot-course/tree/master/less
 编译 resolc
 
 ```sh
-git cone https://github.com/paritytech/revive
+git clone https://github.com/paritytech/revive
 cd revive
 make install-llvm
 export LLVM_SYS_181_PREFIX=${PWD}/target-llvm/gnu/target-final
