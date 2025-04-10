@@ -18,8 +18,12 @@
 ![task3](./snapshot/homework4-3-3.PNG)
 * 编译合约，并部署上assethub-westend
 ![task3](./snapshot/homework4-3-4.PNG)
+* 启动本地polkavm节点
+![task3](./snapshot/homework4-3-6.PNG)
 * 编译合约，并部署上本地polkavm
 ![task3](./snapshot/homework4-3-5.PNG)
+* 部署合约后，本地节点反馈
+![task3](./snapshot/homework4-3-7.PNG)
 
 
 
