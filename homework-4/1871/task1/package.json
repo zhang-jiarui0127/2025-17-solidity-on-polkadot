@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev:viem": "esno src/viem.ts"
+    "dev:viem": "esno src/viem.ts",
+    "dev:ethers": "esno src/ethers.ts"
   },
   "keywords": [],
   "author": "",

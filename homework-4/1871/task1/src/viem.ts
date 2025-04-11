@@ -44,7 +44,7 @@ const watchBlockNumber = async () => {
   const unwatch = publicClient.watchBlockNumber({
     onBlockNumber: (blockNumber) => {
       console.log(`The current block number is ${blockNumber}`);
-      if (currentBlockNumber + BigInt(2) >= blockNumber) {
+      if (blockNumber >= currentBlockNumber + 2n) {
         unwatch();
       }
     },
@@ -65,13 +65,13 @@ const deployContract = async () => {
 };
 
 const readContract = async (address: Address) => {
-  const previousFavoriteNumber = await publicClient.readContract({
+  const favoriteNumber = await publicClient.readContract({
     abi: ABI,
     address,
     functionName: 'favoriteNumber',
   });
 
-  return previousFavoriteNumber;
+  return favoriteNumber;
 };
 
 const writeContract = async (address: Address) => {
@@ -82,7 +82,7 @@ const writeContract = async (address: Address) => {
     abi: ABI,
     address,
     functionName: 'store',
-    args: [previousFavoriteNumber + BigInt(1)],
+    args: [previousFavoriteNumber + 1n],
   });
   await publicClient.waitForTransactionReceipt({ hash: tx });
 
