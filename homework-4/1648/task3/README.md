@@ -34,36 +34,33 @@ AH_PRIV_KEY=0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
 
 ## 合约测试
 
-1. 安装依赖
+### 安装依赖
 
 ```shell
 npm install
 ```
 
-2. 本地部署合约
-
-使用 `hardhat.config.ts` 配置的本地节点 `polkavm`
-
-#### 编译合约为 polkavm 格式
+### 编译合约为 polkavm 格式
 
 ```shell
 npx hardhat compile-revive --contract Storage.sol --show-stack-traces
 ```
 
-#### 部署合约到 polkavm 节点
+### 部署合约到本地 polkavm 节点
+
+使用 `hardhat.config.ts` 配置的本地节点 `polkavm`
 
 ```shell
 npx hardhat deploy-revive --contract Storage --network polkavm
 ```
 
-3. 线上部署合约
+### 线上 ah 部署合约
 
 对于 ah 节点，需要一个账户且账户需要有足够的钱。
 
 #### 创建账户并充值
 
-这里为了方便，利用anvil命令启动时，生成的一个账户，可以看到每个账户的
-address和私钥，如这里使用的账户
+这里为了方便，利用anvil命令启动时生成的一个账户，可以看到每个账户的address和私钥，如这里使用的账户
 
 ```ini
 account address：(0) 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 (10000.000000000000000000 ETH)
@@ -71,8 +68,8 @@ account address：(0) 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 (10000.00000000
 私钥：(0) 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
 ```
 
-但这个账户地址是以太坊格式，而我们需要在 substrate-node
-节点时使用的base58格式的地址，因此需要将账户格式转换一下（https://www.shawntabrizi.com/substrate-js-utilities/），
+但这个账户地址是以太坊格式，而我们在 substrate-node
+节点需要使用的base58格式的账户地址，因此需要将账户格式转换一下（https://www.shawntabrizi.com/substrate-js-utilities/），
 ![alt text](image.png)
 
 #### 账户充值
@@ -81,7 +78,7 @@ account address：(0) 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 (10000.00000000
 `5Ha8yXQgvWcvpFya1BmjtJX386xUskafNTzU4Zmb6B3UwYd9` 领水。 领水交易详情
 https://westend.subscan.io/extrinsic/0x6efc60625b090c22c4a865a2a27c5aa63994df892916434cf51433c3074b937f
 
-#### 部署命令
+#### 部署
 
 ```
 npx hardhat deploy-revive --contract Storage --network ah
@@ -121,6 +118,8 @@ Deployment failed: AggregatedError: fields had validation errors
 为 3_000_000n 仍是一样的错误。
 
 2. 线上ah 节点部署合约失败，报错信息如下：
+
+未领水前部署出错：
 
 ```shell
 (base) ➜  task3 git:(main) ✗ npx hardhat deploy-revive --contract Storage --network ah
@@ -174,3 +173,5 @@ Deployment failed: AggregatedError: fields had validation errors
 ```
 
 可以看到账户余额发生了变化 ，表示领取成功了。
+
+**看到不同的节点出现的错误一样，怀疑是部署程序有问题？**
