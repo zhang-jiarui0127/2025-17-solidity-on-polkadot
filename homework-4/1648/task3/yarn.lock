@@ -3053,7 +3053,7 @@ hardhat-resolc@^0.0.3:
     ts-node "^10.9.2"
     typescript "^5.7.2"
 
-hardhat@^2.0.0, hardhat@^2.0.2, hardhat@^2.0.4, hardhat@^2.11.0, hardhat@^2.18.0, hardhat@^2.22.17, hardhat@^2.23.0, hardhat@^2.9.4, hardhat@^2.9.5, hardhat@^2.9.9:
+hardhat@^2.0.0, hardhat@^2.0.2, hardhat@^2.0.4, hardhat@^2.11.0, hardhat@^2.18.0, hardhat@^2.22.17, hardhat@^2.22.19, hardhat@^2.9.4, hardhat@^2.9.5, hardhat@^2.9.9:
   version "2.23.0"
   resolved "https://registry.npmmirror.com/hardhat/-/hardhat-2.23.0.tgz"
   integrity sha512-xnORx1LgX46TxylOFme96JmSAIjXuHUVpOlUnaCt8MKMGsgy0NGsfPo5rJI/ncCBPLFLURGfZUQ2Uc6ZYN4kYg==
