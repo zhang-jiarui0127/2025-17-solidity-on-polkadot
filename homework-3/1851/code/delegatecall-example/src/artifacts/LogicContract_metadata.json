@@ -1,0 +1,72 @@
+{
+	"compiler": {
+		"version": "0.8.29+commit.ab55807c"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "counter",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "increment",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"src/LogicContract.sol": "LogicContract"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"src/LogicContract.sol": {
+			"keccak256": "0xd7fc55e8cc583c31c63500c443b4b401938862317cb8cf1d3ec5d151f7c3d31b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://25481386c8482cf3072fd7c4580840db8816ae712edc13014da7ca67acab20bd",
+				"dweb:/ipfs/QmWAffo6SHocbVFX3SNUAWN4vbmxcPWMyt7gqgdWpv36pD"
+			]
+		}
+	},
+	"version": 1
+}
