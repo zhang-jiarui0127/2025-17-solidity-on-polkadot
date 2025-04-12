@@ -174,4 +174,9 @@ Deployment failed: AggregatedError: fields had validation errors
 
 可以看到账户余额发生了变化 ，表示领取成功了。
 
-**看到不同的节点出现的错误一样，怀疑是部署程序有问题？**
+** 解决办法 **
+
+重新复制
+https://github.com/papermoonio/2025-h1-solidity-polkadot-course/tree/master/lesson4/hardhat-revive-ts
+项目里的 `package.json` 和 `package-lock.json` 文件，然后执行
+`npm install`，再次部署即可。
