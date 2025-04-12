@@ -34,7 +34,7 @@ const config: HardhatUserConfig = {
       },
       polkavm: {
         polkavm: true,
-        gasLimit:36451736500281453,
+        gasLimit: 36451736500281453,
         url: "http://127.0.0.1:8545",
         accounts: [process.env.LOCAL_PRIV_KEY],
       },
