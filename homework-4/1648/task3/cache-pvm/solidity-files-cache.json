@@ -1,0 +1,54 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/Users/sxf/workspace/2025-17-solidity-on-polkadot/homework-4/1648/task3/contracts/Storage.sol": {
+      "lastModificationDate": 1744361232899,
+      "contentHash": "16ff26828dc83d063f94fa722b57503e",
+      "sourceName": "contracts/Storage.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "istanbul",
+          "optimizer": {
+            "enabled": true,
+            "runs": 400
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "resolc": {
+          "version": "latest",
+          "compilerSource": "binary",
+          "settings": {
+            "optimizer": {
+              "enabled": true,
+              "runs": 400
+            },
+            "evmVersion": "istanbul",
+            "compilerPath": "/Users/sxf/.cargo/bin/resolc",
+            "standardJson": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.8.28 <0.9.0"
+      ],
+      "artifacts": [
+        "Storage"
+      ]
+    }
+  }
+}
