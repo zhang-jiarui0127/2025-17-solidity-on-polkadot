@@ -1,0 +1,13 @@
+{
+  "name": "task1",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "node src/main.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "ethers": "^6.13.5",
+    "viem": "^2.26.2"
+  }
+}
