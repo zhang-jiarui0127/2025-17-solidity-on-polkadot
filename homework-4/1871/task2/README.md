@@ -12,4 +12,6 @@
 
 ## Deploy the MiniDEX
 
-deploy in remix has some issues, waiting for the fix.
+TODO
+
+Deploy in remix has some issues, waiting for the fix.
