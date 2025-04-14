@@ -1,0 +1,35 @@
+Compiling 25 files with Solc 0.8.28
+Solc 0.8.28 finished in 3.40s
+Compiler run successful!
+Analysing contracts...
+Running tests...
+
+Ran 6 tests for test/ProxyTest.t.sol:ProxyTest
+[PASS] testRevertWhen_DeployWithZeroAddress() (gas: 36807)
+[PASS] test_IncrementViaDelegateCall() (gas: 58314)
+[PASS] test_RevertWhen_DelegateCallToInvalidFunction() (gas: 82584)
+[PASS] test_RevertWhen_DelegateCallToZeroAddress() (gas: 38766)
+[PASS] test_RevertWhen_UpdateToZeroAddress() (gas: 9228)
+[PASS] test_UpdateLogicAddress() (gas: 146150)
+Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 1.26ms (1.20ms CPU time)
+
+Ran 2 tests for test/Counter.t.sol:CounterTest
+[PASS] testFuzz_SetNumber(uint256) (runs: 256, μ: 32043, ~: 32354)
+[PASS] test_Increment() (gas: 31851)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 20.93ms (20.60ms CPU time)
+
+Ran 2 test suites in 24.54ms (22.19ms CPU time): 8 tests passed, 0 failed, 0 skipped (8 total tests)
+
+╭-----------------------+-----------------+----------------+---------------+---------------╮
+| File                  | % Lines         | % Statements   | % Branches    | % Funcs       |
++==========================================================================================+
+| script/Counter.s.sol  | 0.00% (0/5)     | 0.00% (0/3)    | 100.00% (0/0) | 0.00% (0/2)   |
+|-----------------------+-----------------+----------------+---------------+---------------|
+| src/Counter.sol       | 100.00% (4/4)   | 100.00% (2/2)  | 100.00% (0/0) | 100.00% (2/2) |
+|-----------------------+-----------------+----------------+---------------+---------------|
+| src/LogicContract.sol | 100.00% (5/5)   | 100.00% (3/3)  | 100.00% (0/0) | 100.00% (2/2) |
+|-----------------------+-----------------+----------------+---------------+---------------|
+| src/ProxyContract.sol | 100.00% (11/11) | 100.00% (9/9)  | 100.00% (6/6) | 100.00% (3/3) |
+|-----------------------+-----------------+----------------+---------------+---------------|
+| Total                 | 80.00% (20/25)  | 82.35% (14/17) | 100.00% (6/6) | 77.78% (7/9)  |
+╰-----------------------+-----------------+----------------+---------------+---------------╯

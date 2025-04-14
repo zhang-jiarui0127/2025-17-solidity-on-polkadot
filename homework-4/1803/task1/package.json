@@ -1,0 +1,20 @@
+{
+  "name": "task1",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "ethers": "bun doEthers.ts",
+    "viem": "bun doViem.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "ethers": "^6.13.5",
+    "viem": "^2.26.2"
+  }
+}
