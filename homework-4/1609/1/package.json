@@ -1,0 +1,20 @@
+{
+  "name": "storage-contract-example",
+  "version": "1.0.0",
+  "description": "Example of deploying and interacting with Storage contract using ethers and viem",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "ethers": "^6.13.5",
+    "viem": "^1.21.4"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@types/node": "^22.14.0",
+    "hardhat": "^2.22.19",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
