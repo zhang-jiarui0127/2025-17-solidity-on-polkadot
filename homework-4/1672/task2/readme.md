@@ -19,7 +19,7 @@
      - initialSupply: 10000
    - 点击部署按钮
    - 记录 TokenA 的合约地址：0xadf47bfd465ca3979ec49d76909c01ab972d7381
-   部署成功截图：[部署成功截图](./pic/Token_A.png)
+   部署成功截图：![部署成功截图](./pic/Token_A.png)
 
 2. 部署第二个 ERC20 代币 (TokenB)
    - 选择 `SimpleERC20.sol` 合约
