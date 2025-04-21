@@ -30,7 +30,7 @@
      - initialSupply: 10000
    - 点击部署按钮
    - 记录 TokenB 的合约地址：0x8780e8892fc43f54d75ebc786e57df8b173eb0b5
-   部署成功截图：[部署成功截图](./pic/Token_B.png)
+   部署成功截图：![部署成功截图](./pic/Token_B.png)
 
 ### 2. 部署 MinimalDex 合约
 
@@ -40,7 +40,7 @@
    - _tokenB: [0x8780e8892fc43f54d75ebc786e57df8b173eb0b5]
 3. 点击部署按钮
    - 记录 MinimalDex 的合约地址：0x074e98dcd9d40c4bfcabc734e4121a48d86cb530
-   部署成功截图：[部署成功截图](./pic/Minimal.png)
+   部署成功截图：![部署成功截图](./pic/Minimal.png)
 
 ## 功能测试
 
@@ -52,7 +52,7 @@
      - _spender: [0x074e98dcd9d40c4bfcabc734e4121a48d86cb530]
      - _value: 10000000000000000000000（授权 1000 个代币，含 18 位小数）
    - 点击执行
-   授权成功截图：[授权成功截图](./pic/Token_A_approve.png)
+   授权成功截图：![授权成功截图](./pic/Token_A_approve.png)
 
 2. 在 TokenB 合约界面：
    - 重复上述步骤，授权 MiniDex 使用 TokenB
@@ -66,7 +66,7 @@
      - inputToken: [0xadf47bfd465ca3979ec49d76909c01ab972d7381]
      - amountIn: 100000000000000000000（10 个 TokenA，含 18 位小数）
    - 点击执行
-   兑换成功截图：[兑换成功截图](./pic/swaft.png)
+   兑换成功截图：![兑换成功截图](./pic/swaft.png)
    - 检查返回的 `amountOut` 值
    - 验证 TokenB 余额是否增加
 
