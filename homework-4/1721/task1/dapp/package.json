@@ -1,0 +1,26 @@
+{
+  "name": "dapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node main.ts",
+    "dev:ethers": "ts-node src/ethers_main.ts",
+    "dev:viem": "ts-node src/viem_main.ts",
+    "dev:storage": "ts-node src/storage_ethers_main.ts",
+    "dev:storage-viem": "ts-node src/storage_viem_main.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "viem": "^2.23.11",
+    "ethers": "^6.13.5",
+    "dotenv": "16.4.7"
+  }
+}

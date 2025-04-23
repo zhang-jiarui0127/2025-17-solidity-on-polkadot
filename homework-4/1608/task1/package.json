@@ -1,0 +1,12 @@
+{
+  "name": "hardhat-project",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox-viem": "^3.0.0",
+    "hardhat": "^2.22.19"
+  },
+  "scripts": {
+      "ethers": "ts-node ethers.ts",
+    "viem":"ts-node viem.ts"
+  }
+
+}

@@ -1,0 +1,21 @@
+{
+  "name": "hardhat-project",
+  "license": "ISC",
+  "scripts": {
+    "start-ethers": "ts-node src/ethers-main.ts",
+    "start-viem": "ts-node src/viem-main.ts",
+    "ethers": "ts-node src/ethers-do.ts",
+    "viem": "ts-node src/viem-do.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox-viem": "^3.0.0",
+    "hardhat": "^2.22.19",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "viem": "^2.23.11",
+    "ethers": "^6.13.5"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "homework4-1791",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "esno": "^4.8.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "ethers": "6.13.5",
+    "viem": "2.23.11"
+  }
+}
