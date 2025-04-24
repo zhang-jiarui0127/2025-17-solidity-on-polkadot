@@ -19,9 +19,9 @@ async function main() {
 
   try {
     // 使用正确的合约地址 - 之前部署成功的地址
-    const tokenAAddress = "0x8740D8eF8f3744d2d11c13d22BF9c51C886399dD";
-    const tokenBAddress = "0x663f26D7d5601d70eCA480164E8399bfA37eFE12";
-    const dexAddress = "0xBF35f959D9460A4147ab832Ce984A58A8d5AD41a";
+    const tokenAAddress = "0xea54e061E82a14b21d14AF3891c86026D6EA4A50";
+    const tokenBAddress = "0xC1bed3FE246eD0A4D4D6cF97f225aFF8435dfcA4";
+    const dexAddress = "0x57D386359b2364435C346Ee7d118Cf265C8C6CAE";
 
     console.log(`连接到TokenA合约: ${tokenAAddress}`);
     // 使用替代方法连接合约

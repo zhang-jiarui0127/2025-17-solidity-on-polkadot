@@ -11,14 +11,14 @@
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
-    "@nomicfoundation/hardhat-ethers": "^3.0.8",
     "@parity/revive": "^0.0.21",
+    "hardhat-resolc": "^0.0.8",
+    "hardhat-revive-node": "^0.0.7",
     "ethers": "^6.13.5",
-    "hardhat": "^2.22.19"
+    "hardhat": "2.22.19"
   },
   "dependencies": {
     "dotenv": "^16.4.7",
-    "hardhat-resolc": "^0.0.8",
     "viem": "^2.27.3"
   }
 }

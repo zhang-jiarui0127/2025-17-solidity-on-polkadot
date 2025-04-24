@@ -24,10 +24,10 @@ async function main() {
     const provider = new ethers.JsonRpcProvider(
       "https://westend-asset-hub-eth-rpc.polkadot.io"
     );
-    const privateKey = process.env.LOCAL_PRIV_KEY;
+    const privateKey = process.env.HA_PRIV_KEY;
 
     if (!privateKey) {
-      throw new Error("请在.env文件中设置LOCAL_PRIV_KEY环境变量");
+      throw new Error("请在.env文件中设置HA_PRIV_KEY环境变量");
     }
 
     const wallet = new ethers.Wallet(privateKey, provider);
