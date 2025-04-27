@@ -1,22 +1,10 @@
-1. 配置`.env`文件，添加以下内容：
-
-   ```
-   LOCAL_PRIV_KEY=你的私钥（不要泄露！）
-   ```
-
-2.安装依赖
+### 编译合约
 
 ```shell
-npm install
+USE_RESOLC=true npx hardhat compile
 ```
 
-3.编译合约
-
-```shell
-npx hardhat compile
-```
-
-4.运行脚本
+### 运行脚本
 
 ```shell
 node scripts/作业一/viem_main.js
