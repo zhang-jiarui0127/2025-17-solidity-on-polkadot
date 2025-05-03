@@ -5,6 +5,8 @@ export const ALCHEMY_KEY = process.env.ALCHEMY_KEY!;
 export const ALCHEMY_MAINNET_RPC = `https://eth-mainnet.g.alchemy.com/v2/${ALCHEMY_KEY}`;
 export const ALCHEMY_SEPOLIA_RPC = `https://eth-sepolia.g.alchemy.com/v2/${ALCHEMY_KEY}`;
 
+export const PRIVATE_KEY = process.env.PRIVATE_KEY!;
+
 export const DAI_ADDRESS = "0x6B175474E89094C44Da98b954EedeAC495271d0F";
 
 export const CHAIN_IDS = {
