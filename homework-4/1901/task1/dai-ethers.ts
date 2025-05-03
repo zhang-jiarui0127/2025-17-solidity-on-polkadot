@@ -1,15 +1,14 @@
 import { ethers } from "ethers";
-import * as dotenv from "dotenv";
-dotenv.config();
 
 import { DAI_ADDRESSES } from './config';
 
 const dai_address = DAI_ADDRESSES['mainnet'];
 
 import { daiAbi } from './abi';
+import {ALCHEMY_MAINNET_RPC} from './config'
 
 async function main() {
-  const provider = new ethers.JsonRpcProvider(process.env.RPC_URL);
+  const provider = new ethers.JsonRpcProvider(ALCHEMY_MAINNET_RPC);
   const dai = new ethers.Contract(dai_address, daiAbi, provider);
   const dead_address = "0x000000000000000000000000000000000000dEaD"; // DAI blackhole address
 
