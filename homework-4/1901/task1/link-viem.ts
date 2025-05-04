@@ -1,12 +1,8 @@
-import { createPublicClient, http } from "viem";
+import { createPublicClient, createWalletClient, http } from "viem";
 import { sepolia } from "viem/chains";
-import { linkAbi } from "./abi";
-import { LINK_ADDRESSES } from "./config";
-import { ALCHEMY_SEPOLIA_RPC } from "./config";
-
-import { createWalletClient } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
-import {PRIVATE_KEY} from './config'
+import { linkAbi } from "./abi";
+import { LINK_ADDRESSES, ALCHEMY_SEPOLIA_RPC, PRIVATE_KEY } from "./config";
 
 const publicClient = createPublicClient({
   chain: sepolia,
